@@ -1,0 +1,81 @@
+@media (max-width: 500px) {
+    .header {
+        &_phones {
+            flex-direction: column;
+        } 
+    }
+    .first_screen {
+        &_left {
+            &_title {
+                font-family: "namu-1990";
+                font-size: 36px;
+            }
+        }
+        &_right {
+            max-width: 200px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            &_item {
+                background: url("../../img/first_screen_right_item_bac.png") no-repeat;
+                -webkit-background-size: contain;
+                -moz-background-size: contain;
+                -o-background-size: contain;
+                background-size: contain;
+                
+            }
+        }
+    }
+    .about {
+        &_me {
+            &_left {
+                width: 300px;
+                height: 300px;
+                flex: 0 0 300px;
+            }
+        }
+    }
+    .reviews {
+        &_docs {
+            grid-template-columns: 300px;
+        }
+        &_list {
+            display: block;
+            margin: 0 auto;
+            & img {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+    .services {
+        &_box {
+            &_item {
+                padding: 30px 15px;
+                &_icon {
+                    position: static;
+                    display: block;
+                    // margin: 0 auto;
+                    width: 50px;
+                    height: 50px;
+                }
+                &_title {
+                    margin-top: 15px;
+                    font-size: 20px;
+                }
+                &_box {
+                    margin-top: 20px;
+                    &_btn {
+                        @include btn_with_background_gradient(5px 20px);
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        &_up {
+            top: 50px;
+            right: 20px;
+        }
+    }
+}

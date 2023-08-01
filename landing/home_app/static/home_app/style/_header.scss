@@ -1,0 +1,48 @@
+.header {
+    color: var(--white);
+    &_container {
+        padding-top: 39px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &_title {
+        max-width: 116px;
+        font-size: 20px;
+        font-family: "namu-1990";
+    }
+    &_nav ul {
+        display: flex;
+        gap: 55px;
+        font-family: "Raleway";
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 108%; 
+    }
+    &_email {
+        font-family: "Raleway";
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 108%;
+    }
+    &_phone {
+        font-variant-numeric: lining-nums proportional-nums;
+        font-family: "namu-1990";
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 108%;
+        margin-bottom: 6px;
+    }
+    &_phone_btn {
+        display: block;
+        margin: 0 auto;
+        font-family: "namu-1990";
+        font-size: 14px;
+        font-weight: 800;
+        line-height: 110.8%;
+        padding: 10px 51px;
+        color: var(--white);
+        @extend .btn_with_gradient_border;
+    }
+}

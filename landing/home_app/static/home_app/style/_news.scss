@@ -1,0 +1,24 @@
+.news {
+    padding: 100px 0 113px 0;
+    font-family: 'Manrope', sans-serif;
+    background: #fff;
+    &_title {
+        @extend .section_title;
+    }
+    &_subtitle {
+        @include section_subtitle(730px, 9px);
+    }
+    &_media {
+        display: grid;
+        grid-template-columns: repeat(3, 360px);
+        justify-content: space-between;
+        margin-top: 62px;
+        &_item {
+            max-width: 360px;
+            height: 245px;
+            border-radius: 18px;
+            background: #f2f0ef;
+            overflow: hidden;
+        }
+    }
+}

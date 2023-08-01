@@ -1,0 +1,70 @@
+@media (max-width: 1100px) {
+    .header {
+        &_container {
+            flex-direction: column;
+            gap: 15px;
+        }
+        &_title {
+            max-width: 100%;
+            font-size: 35px;
+            text-align: center;
+        }
+        &_nav {
+            width: 100%;
+            & ul {
+                justify-content: space-between;
+                width: 80%;
+                margin: 0 auto;
+                font-size: 25px;
+            }
+        }
+        &_email {
+            font-size: 20px;
+        }
+        &_phones {
+            width: 60%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &_phone_btn {
+            margin: 0;
+        }
+    }
+
+    .audit {
+        &_box {
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            &_item {
+                width: 80%;
+            }
+        }
+    }
+
+    .reviews {
+        &_docs {
+            grid-template-columns: repeat(3, 185px);
+        }
+        &_list {
+            grid-template-columns: repeat(3, 160px);
+        }
+    }
+
+    .services {
+        &_box {
+            flex-direction: column;
+            &_item {
+                width: 100%;
+                position: relative;
+            }
+        }
+    } 
+    .footer {
+        &_up {
+            top: 50px;
+            right: 50px;
+        }
+    }
+}

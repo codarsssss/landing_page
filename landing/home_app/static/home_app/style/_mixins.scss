@@ -1,0 +1,28 @@
+@mixin btn_with_background_gradient($padding) {
+    padding: $padding;
+    border-radius: 6px;
+    background: linear-gradient(142deg, #ECD8CD 0%, #D8AE97 100%);
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 177.8%;
+}
+
+@mixin section_subtitle($w, $m) {
+    color: #1a1a1a;
+    text-align: center;
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 110.8%;
+    max-width: $w;
+    margin: $m auto 0 auto;
+    @media (max-width: 400px) {
+        font-size: 26px;
+    }
+}
+
+@mixin dynamic_padding($oldpadding, $newpadding, $newpaddingpx, $maxw, $minw, $minwpx) {
+    // calc( (100vw - 320px)/(768 - 320) * (16 - 14) + 14px)
+    padding: 0 calc( (100vw - $minwpx)/($maxw - $minw) * ($oldpadding - $newpadding) + $newpaddingpx);
+}

@@ -1,0 +1,16 @@
+@media (max-width: 1560px) {
+    .container {
+        @include dynamic_padding(200, 50, 50px, 1560, 1260, 1260px);
+    }
+    .header {
+        &_container {
+            padding-top: 39px;
+        }
+    }
+    .footer {
+        &_up {
+            top: -80px;
+            right: 30px;
+        }
+    }
+}

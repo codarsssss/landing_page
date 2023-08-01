@@ -1,0 +1,85 @@
+.services {
+    background: var(--services_background);
+    padding-top: 90px;
+    font-family: 'Manrope', sans-serif;
+    padding-bottom: var(--section_padding-bottom);
+    position: relative;
+    &_title {
+        @extend .section_title;
+    }
+    &_subtitle {
+        & span {
+            display: block;
+            margin-top: 13px;
+            color: #1A1A1A;
+            text-align: center;
+            font-size: 38px;
+            font-weight: 600;
+            line-height: 110.8%;
+            opacity: 1;
+        }
+        & p {
+            margin-top: 12px;
+            max-width: 719px;
+            text-align: center;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 171.3%;
+            color: #211F1F;
+            margin: 0 auto;
+            opacity: 0.800000011920929;
+        }
+    }
+    &_box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 19px;
+        margin-top: 53px;
+        &_item {
+            position: relative;
+            width: 48.28%;
+            padding: 38px 100px 39px 50px;
+            border-radius: 18px;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.58) 100%);
+            &_icon {
+                position: absolute;
+                right: 35px;
+                top: 35px;
+            }
+            &_title {
+                font-size: 25px;
+                font-weight: 500;
+                line-height: 110.8%;
+            }
+            &_description {
+                margin-top: 10px;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 177.8%;
+                opacity: 0.699999988079071;
+            }
+            &_box {
+                margin-top: 20px;
+                display: flex;
+                justify-content: space-between;
+                gap: 10px;
+                align-items: center;
+                &_btn {
+                    @include btn_with_background_gradient(5px 49px);
+                }
+                &_price {
+                    color: #1A1A1A;
+                    font-size: 20px;
+                    font-weight: 600;
+                    line-height: 177.8%;
+                }
+            }
+        }
+    }
+    &_crop {
+        @extend .crop;
+    }
+}

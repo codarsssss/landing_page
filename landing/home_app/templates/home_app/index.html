@@ -1,13 +1,292 @@
+<!DOCTYPE html>
 {% load static %}
-<html>
-    <heade>
-        <title>
-            {{title}}
-        </title>
-    </heade>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Brygada+1918:wght@500&family=Manrope:wght@300;400;500;600;700&family=Raleway:wght@500;600;700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'home_app/style/css/style.css' %}">
+    </head>
+
     <body>
-        <h1>
-            Hello, World!
-        </h1>
+        <div class="wrapper">
+            <section class="first_screen">
+                <header class="header" id="header">
+                    <div class="container header_container">
+                     <div class="logo">
+                        <img src="{% static 'home_app/img/logo.png' %}" alt="Логотип">
+                     </div>
+                     <p class="header_title">Чебучакова Татьяна</p>
+                     <nav class="header_nav">
+                        <ul>
+                            <li><a href="#services">Услуги</a></li>
+                            <li><a href="#about">Об эксперте</a></li>
+                            <li><a href="#reviews">Отзывы</a></li>
+                        </ul>
+                     </nav>
+                     <div class="header_email"><a href="#">info@chebuchakova.ru</a></div>
+                     <div class="header_phones">
+                        <p class="header_phone">+7 900 200-39-39</p>
+                        <button class="header_phone_btn">Заказать звонок</button>
+                     </div>
+                    </div>
+                </header>
+                <div class="first_screen_content">
+                    <div class="container">
+                        <div class="first_screen_left">
+                            <button class="first_screen_left_btn_fist"><a href="#">Адвокат, арбитражный управляющий</a></button>
+                            <h1 class="first_screen_left_title">Чебучакова Татьяна  — эксперт по банкротству</h1>
+                            <ul class="first_screen_left_services">
+                                <li>Сопровождение любых споров в деле о банкротстве</li>
+                                <li>Защита от субсидиарной ответственности</li>
+                                <li>Оптимизация долговых обязательств компании</li>
+                            </ul>
+                            <div class="first_screen_left_box_btn">
+                                <button class="first_screen_left_box_btn_two"><a href="#">Получить консультацию</a></button>
+                                <div class="first_screen_left_box_btn_background"></div>
+                            </div>
+                            
+                        </div>
+                        <div class="first_screen_right">
+                            <div class="first_screen_right_item">
+                                <p>><span> 15</span>лет</p>
+                                <p>помогаю владельцам бизнеса обезопасить себя от субсидиарной ответственности, и сохранить своё имущество</p>
+                            </div>
+                            <div class="first_screen_right_item">
+                                <p>><span> 50</span>млрд</p>
+                                <p>сумма выгоды клиентов в виде отказа от привлечения к субси-диарной ответствен-ности, либо убережен-ного имущества</p>
+                            </div>
+                        </div>
+                        <img src="{% static 'home_app/img/person.png' %}" class="first_screen_person">
+                    </div>
+                </div>
+                <img src="{% static 'home_app/img/crop_first_screen.png' %}" class="first_screen_crop">
+            </section>
+            <section class="services" id="services">
+                <div class="container">
+                    <h2 class="services_title">УСЛУГИ</h2>
+                    <div class="services_subtitle">
+                        <span>Комплекс услуг:</span>
+                        <p>позволяющий защитить добросовестных руководителей и собственников бизнеса от субсидиарной ответственности по долгам банкрота.</p>
+                    </div>
+                    <div class="services_box">
+                        <div class="services_box_item">
+                            <img src="{% static 'home_app/img/services1.png' %}" class="services_box_item_icon">
+                            <h3 class="services_box_item_title">Сопровождение процедур банкротства</h3>
+                            <p class="services_box_item_description">Подготовка подробного пошагового плана реализации проекта, который приведет к достижению цели с минимальными рисками.</p>
+                            <div class="services_box_item_box">
+                                <button class="services_box_item_box_btn"><a href="#">Подробнее</a></button>
+                                <p class="services_box_item_box_price">от 100 000 ₽</p>
+                            </div>
+                        </div>
+                        <div class="services_box_item">
+                            <img src="{% static 'home_app/img/services2.png' %}" class="services_box_item_icon">
+                            <h3 class="services_box_item_title">Защита от субсидиарной ответственности</h3>
+                            <p class="services_box_item_description">Помощь: должникам, кредиторам, контролирующим лицам должника, директорам, при спорах с налоговым органом</p>
+                            <div class="services_box_item_box">
+                                <button class="services_box_item_box_btn"><a href="#">Подробнее</a></button>
+                                <p class="services_box_item_box_price">от 100 000 ₽</p>
+                            </div>
+                        </div>
+                        <div class="services_box_item">
+                            <img src="{% static 'home_app/img/services3.png' %}" class="services_box_item_icon">
+                            <h3 class="services_box_item_title">Помощь во взыскании долговых обязательств</h3>
+                            <p class="services_box_item_description">Взыскиваем: судебные расходы, взыскание расходов, вызванных проведением проверок, налоговые споры</p>
+                            <div class="services_box_item_box">
+                                <button class="services_box_item_box_btn"><a href="#">Подробнее</a></button>
+                                <p class="services_box_item_box_price">от 100 000 ₽</p>
+                            </div>
+                        </div>
+                        <div class="services_box_item">
+                            <img src="{% static 'home_app/img/services4.png' %}" class="services_box_item_icon">
+                            <h3 class="services_box_item_title">Оптимизация долговых обязательств компании</h3>
+                            <p class="services_box_item_description">-Взыскание дебиторской задолженности
+                                <br>-Ведение дел о банкротстве при наличии долгов</p>
+                            <div class="services_box_item_box">
+                                <button class="services_box_item_box_btn"><a href="#">Подробнее</a></button>
+                                <p class="services_box_item_box_price">от 100 000 ₽</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img src="{% static 'home_app/img/crop_services.png' %}" class="services_crop">
+            </section>
+            <section class="audit">
+                <div class="container">
+                    <h2 class="audit_title">АУДИТ</h2>
+                    <p class="audit_subtitle">Получите анализ рисков привлечения 
+                        к субсидиарной ответственности</p>
+                    <div class="audit_box">
+                        <div class="audit_box_item">
+                            <img src="{% static 'home_app/img/audit_icon.png' %}" class="audit_box_item_icon">
+                            <h3 class="audit_box_item_title">Чек-лист</h3>
+                            <p class="audit_box_item_description">Для самостоятельного аудита рисков привлечения к субсидиарной отвтетственности</p>
+                            <button class="audit_box_item_btn"><a href="#">Получить</a></button>
+                            <img src="{% static 'home_app/img/audit_bac1.png' %}" class="audit_box_item_bac">
+                        </div>
+                        <div class="audit_box_item">
+                            <img src="{% static 'home_app/img/audit_icon.png' %}" class="audit_box_item_icon">
+                            <h3 class="audit_box_item_title">Консультация</h3>
+                            <p class="audit_box_item_description">Получите экспертную и честную оценку перспективы дела на 30-ти минутной консультации</p>
+                            <button class="audit_box_item_btn"><a href="#">Заказать</a></button>
+                            <img src="{% static 'home_app/img/audit_bac2.png' %}" class="audit_box_item_bac"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="about" id="about">
+                <img src="{% static 'home_app/img/crop_audit.png' %}" class="about_crop">
+                <div class="container">
+                    <div class="about_me">
+                        <div class="about_me_left"><img src="img/person.png"></div>
+                        <div class="about_me_right">
+                            <button class="about_me_right_btn"><a href="#">Адвокат, арбитражный управляющий</a></button>
+                            <h2 class="about_me_right_title">Чебучакова Татьяна Юрьевна</h2>
+                            <p class="about_me_right_subtitle">Эксперт по защите личных активов и субсидиарной ответственности первых лиц. Сопровождение любых споров в деле о банкротстве</p>
+                            <ul class="about_me_right_data">
+                                <li>Приняла участие более чем в 1000 судебных процессах.</li>
+                                <li>Востребованный эксперт, регулярные выступления на крупных профессиональных форумах и конференциях.</li>
+                                <li>Эксперт по оказанию юридической помощи при Уполномоченном по защите прав предпринимателей в городе Москве (pro bono)</li>
+                                <li>Выпускник университет имени Г.В. Плеханова</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="about_characteristics">
+                        <div class="about_characteristics_item">
+                            <img src="{% static 'home_app/img/characteristics1.png' %}" class="about_characteristics_item_icon">
+                            <p class="about_characteristics_item_characteristic"><span>90% клиентов</span> приходят по рекомендациям</p>
+                        </div>
+                        <div class="about_characteristics_item">
+                            <img src="{% static 'home_app/img/characteristics2.png' %}" class="about_characteristics_item_icon">
+                            <p class="about_characteristics_item_characteristic"><span>Персональная</span> стратегия защиты для каждого клиента</p>
+                        </div>
+                        <div class="about_characteristics_item">
+                            <img src="{% static 'home_app/img/characteristics3.png' %}" class="about_characteristics_item_icon">
+                            <p class="about_characteristics_item_characteristic"><span>Полная отдача</span> процессу разрешения спора</p>
+                        </div>
+                        <div class="about_characteristics_item">
+                            <img src="{% static 'home_app/img/characteristics4.png' %}" class="about_characteristics_item_icon">
+                            <p class="about_characteristics_item_characteristic">Высокий уровень <span>конфиденци-альности</span></p>
+                        </div>
+                    </div>
+                    <div class="about_box">
+                        <div class="about_box_left">
+                            <h3 class="about_box_left_title">Принципы работы:</h3>
+                            <ul class="about_box_left_list">
+                                <li>Всегда выполняю принятые на себя обязательства</li>
+                                <li>Обеспечиваю высокий уровень конфиденциальности для клиента, что исключает возможность утечки информации</li>
+                                <li>Доверие моих клиентов всегда стоит на первом месте</li>
+                                <li>Заинтересованность в долгосрочном сотрудничестве</li>
+                            </ul>
+                        </div>
+                        <div class="about_box_right">
+                            <h3 class="about_box_right_title">Результат:</h3>
+                            <p class="about_box_right_results">Результат моей работы — это уверенность в том, что все Ваши накопления и активы 
+                                <span>будут сохранены</span>, независимо от того являетесь ли Вы владельцем бизнеса, предпринимателем, или частным лицом.  Вы будете чувствовать себя в безопасности и защищенности, Вы сможете планировать свое будущее, что приумножит ресурсность в мире и будущих поколений.</p>
+                        </div>
+                    </div>
+                    <img src="{% static 'home_app/img/signature.png' %}" class="about_signature">
+                </div>
+                <img src="{% static 'home_app/img/crop_about.png' %}" class="about_crop-bottom">
+            </section>
+            <section class="reviews" id="reviews">
+                <div class="container">
+                    <h2 class="reviews_title">ОТЗЫВЫ</h2>
+                    <p class="reviews_subtitle">Отзывы клиентов</p>
+                    <ul class="reviews_docs">
+                        <li><img src="{% static 'home_app/img/reviews1.png' %}" alt=""></li>
+                        <li><img src="{% static 'home_app/img/reviews1.png' %}" alt=""></li>
+                        <li><img src="{% static 'home_app/img/reviews1.png' %}" alt=""></li>
+                        <li><img src="{% static 'home_app/img/reviews1.png' %}" alt=""></li>
+                        <li><img src="{% static 'home_app/img/reviews1.png' %}" alt=""></li>
+                    </ul>
+                    <ul class="reviews_list">
+                        <li><img src="{% static 'home_app/img/reviews2.png' %}" alt=""></li>
+                        <li><img src="{% static 'home_app/img/reviews3.png' %}" alt=""></li>
+                        <li><img src="{% static 'home_app/img/reviews2.png' %}" alt=""></li>
+                        <li><img src="{% static 'home_app/img/reviews3.png' %}" alt=""></li>
+                        <li><img src="{% static 'home_app/img/reviews2.png' %}" alt=""></li>
+                        <li><img src="{% static 'home_app/img/reviews3.png' %}" alt=""></li>
+                        <li><img src="{% static 'home_app/img/reviews2.png' %}" alt=""></li>
+                        <li><img src="{% static 'home_app/img/reviews3.png' %}" alt=""></li>
+                        <li><img src="{% static 'home_app/img/reviews2.png' %}" alt=""></li>
+                        <li><img src="{% static 'home_app/img/reviews3.png' %}" alt=""></li>
+                    </ul>
+                </div>
+                <img src="{% static 'home_app/img/crop_reviews.png' %}" class="reviews_crop">
+            </section>
+            <section class="algorithm">
+                <div class="container">
+                    <h2 class="algorithm_title">УСЛУГИ</h2>
+                    <p class="algorithm_subtitle">Алгоритм работы</p>
+                    <p class="algorithm_description">Узнайте как за 4 шага защитить себя и своих коллег от субсидиарной ответственности и обезопасить активы</p>
+                    <div class="algorithm_box">
+                        <div class="algorithm_box_item">
+                            <div class="algorithm_box_item_icon algorithm_box_item_icon_first"><p>1</p></div>
+                            <h3 class="algorithm_box_item_title">Бесплатная консультация</h3>
+                            <p class="algorithm_box_item_text">В ходе бесплатной консультации мы дадим предварительную оценку перспектив вашего дела и предложим стратегию защиты.</p>
+                        </div>
+                        <div class="algorithm_box_item">
+                            <div class="algorithm_box_item_icon"><p>2</p></div>
+                            <h3 class="algorithm_box_item_title">Ознакомление с делом</h3>
+                            <p class="algorithm_box_item_text">После заключения договора и передачи вводных данных, мы приступим к детальному изучениювашего дела.</p>
+                        </div>
+                        <div class="algorithm_box_item">
+                            <div class="algorithm_box_item_icon"><p>3</p></div>
+                            <h3 class="algorithm_box_item_title">Разработка стратегии</h3>
+                            <p class="algorithm_box_item_text">Готовим «дорожную карту» - пошаговый алгоритм действий. Согласовываем план действий с клиентом</p>
+                        </div>
+                        <div class="algorithm_box_item">
+                            <div class="algorithm_box_item_icon algorithm_box_item_icon_last"><p>4</p></div>
+                            <h3 class="algorithm_box_item_title">Защита ваших интересов в суде</h3>
+                            <p class="algorithm_box_item_text">Самый ответственный и важный этап, от которого будет зависеть исход всего дела. Сопровождаем до результата</p>
+                        </div>
+                    </div>
+                </div>
+                <img src="{% static 'home_app/img/crop_services.png' %}" class="algorithm_crop">
+            </section>
+            <section class="news">
+                <div class="container">
+                    <h2 class="news_title">МЕДИА</h2>
+                    <p class="news_subtitle">Новости и публикации</p>
+                    <div class="news_media">
+                        <div class="news_media_item"></div>
+                        <div class="news_media_item"></div>
+                        <div class="news_media_item"></div>  
+                    </div>
+                </div>
+            </section>
+            <footer class="footer">
+                <header class="header">
+                    <div class="container header_container">
+                     <div class="logo">
+                        <img src="{% static 'home_app/img/logo.png' %}" alt="Логотип">
+                     </div>
+                     <p class="header_title">Чебучакова Татьяна</p>
+                     <nav class="header_nav">
+                        <ul>
+                            <li><a href="#">Услуги</a></li>
+                            <li><a href="#">Об эксперте</a></li>
+                            <li><a href="#">Отзывы</a></li>
+                        </ul>
+                     </nav>
+                     <div class="header_email"><a href="#">info@chebuchakova.ru</a></div>
+                     <div class="header_phones">
+                        <p class="header_phone">+7 900 200-39-39</p>
+                        <button class="header_phone_btn">Заказать звонок</button>
+                     </div>
+                     <button class="footer_up"><a href="#header"><img src="{% static 'home_app/img/arrow.png' %}" alt=""></a></button>
+                    </div>
+                </header>
+                <div class="container">
+                    <p class="footer_confidentiality">Политика конфиденциальности</p>
+                </div>
+            </footer>
+        </div>
     </body>
+
 </html>
