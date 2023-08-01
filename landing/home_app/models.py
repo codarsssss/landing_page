@@ -43,34 +43,38 @@ class Review(models.Model):
         return self.name
 
 
+# Модель заявок
 class Consultation(models.Model):
 
     class Status(models.TextChoices):
         CALLED_BACK = 'ДА', 'ПЕРЕЗВОНИЛИ'
         NO_CALLED_BACK = 'НЕТ', 'НЕ ПЕРЕЗВОНИЛИ'
-    username = models.CharField(max_length=100)
-    number = models.CharField(max_length=12)
-    status = models.CharField(max_length=3, choices=Status.choices, default=Status.NO_CALLED_BACK)
-    date_application = models.DateTimeField(auto_now_add=True)
+    username = models.CharField(max_length=100, verbose_name='Имя')
+    number = models.CharField(max_length=12, verbose_name='Номер телефона')
+    status = models.CharField(max_length=3, choices=Status.choices, 
+                              default=Status.NO_CALLED_BACK, verbose_name='Статус')
+    date_application = models.DateTimeField(auto_now_add=True, verbose_name='Дата заявки')
 
     class Meta:
         ordering = ['-date_application']
-        verbose_name_plural = "Заявки"
+        verbose_name_plural = 'Заявки'
 
     def __str__(self):
         return self.username
 
 
+# Модель новостей
 class News(models.Model):
 
-    title = models.CharField(max_length=255)
-    slug = models.URLField()
-    image = models.ImageField()
-    text = models.TextField()
-    create_datetime = models.DateTimeField(auto_now_add=True)
+    title = models.CharField(max_length=255, verbose_name='Заголовок')
+    slug = models.SlugField(verbose_name='Слаг поста')
+    image = models.ImageField(verbose_name='Фото')
+    text = models.TextField(verbose_name='Текст новости')
+    create_datetime = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
 
-    def Meta:
-    ordering = ['-create_datetime']
+    class Meta:
+        ordering = ['-create_datetime']
+        verbose_name_plural = 'Новости'
 
     def __str__(self):
         return self.title

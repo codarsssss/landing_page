@@ -16,22 +16,15 @@ class ServiceForm(forms.ModelForm):
         fields = ['title', 'description', 'price']
 
 
+# Форма для оставления заявки
 class ConsultationForm(forms.ModelForm):
-    username = forms.CharField(max_length=100)
-    number = forms.CharField(max_length=12)
-
     class Meta:
         model = Consultation
         fields = ['username', 'number']
 
 
-class NewsrForm(forms.ModelForm):
-    title = forms.CharField(max_length=255)
-    slug = forms.URLField()
-    image = forms.ImageField()
-    text = forms.Textarea()
-    create_datetime = forms.DateTimeField(auto_now_add=True)
-
+# Форма для добавления новости
+class NewsForm(forms.ModelForm):
     class Meta:
         model = News
         fields = ['title', 'create_datetime', 'text', 'image']
