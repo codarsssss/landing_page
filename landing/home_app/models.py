@@ -16,8 +16,10 @@ class Service(models.Model):
 
 
     class Meta:
-        verbose_name_plural = 'Услуги'
         ordering = ['-create_date']
+
+        verbose_name = 'Услугу'
+        verbose_name_plural = 'Услуги'
 
 
     def __str__(self):
@@ -36,8 +38,10 @@ class Review(models.Model):
 
 
     class Meta:
-        verbose_name_plural = 'Отзывы'
         ordering = ['-create_date']
+        
+        verbose_name = 'Отзыв'
+        verbose_name_plural = 'Отзывы'
 
     
     def __str__(self):
@@ -58,6 +62,8 @@ class Consultation(models.Model):
 
     class Meta:
         ordering = ['-date_application']
+
+        verbose_name = 'Заявку'
         verbose_name_plural = 'Заявки'
 
     def __str__(self):
@@ -82,6 +88,8 @@ class News(models.Model):
 
     class Meta:
         ordering = ['-create_datetime']
+
+        verbose_name = 'Новость'
         verbose_name_plural = 'Новости'
 
     def __str__(self):
