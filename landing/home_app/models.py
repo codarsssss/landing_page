@@ -78,6 +78,21 @@ def news_photo_path(instance, filename):
     return 'news_photo/slug_{0}/{1}'.format(instance.slug, filename)
 
 
+"""
+
+class NewsPublishedManager(models.Manager) является конкретно-прикладным 
+модельным менеджером, в конкретном случае он будет выводить из бд 
+только те посты, у которых есть статут 'Опубликован'.  
+Для извлечения обектов нужно использовать 'News.published.all()'.
+
+Если вы хотите использовать кастомный модельный менеджер и при этом
+сохранить стандартный 'News.objects.all()', то нужно его явно указать
+перед кастомным - 1) objects = models.Manager() 2) published = NewsPublishedManager().
+Также можно использовать Meta-атрибут default_manager_name.
+
+"""
+
+
 class NewsPublishedManager(models.Manager):
     def get_queryset(self) -> QuerySet:
         return super().get_queryset().filter(
