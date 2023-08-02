@@ -6,7 +6,7 @@ from .models import News, Review, Service
 # Главная страница
 def index(request):
 
-    news = News.objects.filter(active=True) # Все активные новости
+    news = News.published.all() # Все новости, у которых status = Published
     review = Review.objects.filter(active=True) # Все активные отзывы
     service = Service.objects.filter(active=True) # Все активные услуги
 
