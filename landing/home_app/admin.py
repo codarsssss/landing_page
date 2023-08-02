@@ -14,7 +14,7 @@ class AdminNews(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
     list_filter = ['active', 'create_datetime']
     search_fields = ['title', 'slug', 'text']
-    ordering = ['active', 'create_datetime']
+    ordering = ['active', '-create_datetime']
     readonly_fields = ['create_datetime']
 
 
@@ -25,7 +25,7 @@ class AdminReview(admin.ModelAdmin):
                     'active']
     list_filter = ['active', 'create_date']
     search_fields = ['body', 'name']
-    ordering = ['active', 'create_date']
+    ordering = ['active', '-create_date']
     readonly_fields = ['create_date']
 
 
@@ -36,7 +36,7 @@ class AdminService(admin.ModelAdmin):
     list_filter = ['active', 'price', 'create_date']
     readonly_fields = ['create_date']
     search_fields = ['title', 'description']
-    ordering = ['active', 'create_date']
+    ordering = ['active', '-create_date']
 
 
 # Заявки в админ панеле
@@ -47,7 +47,7 @@ class AdminConsultation(admin.ModelAdmin):
     list_filter = ['status', 'date_application']
     readonly_fields = ['date_application']
     search_fields = ['username']
-    ordering = ['status', 'date_application']
+    ordering = ['status', '-date_application']
 
 
 admin.site.unregister(User)
