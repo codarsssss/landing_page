@@ -15,13 +15,11 @@ class Service(models.Model):
     active = models.BooleanField(default=1, verbose_name='Активна/Не активна')
     create_date = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
 
-
     class Meta:
         ordering = ['-create_date']
 
         verbose_name = 'Услугу'
         verbose_name_plural = 'Услуги'
-
 
     def __str__(self):
         return self.title

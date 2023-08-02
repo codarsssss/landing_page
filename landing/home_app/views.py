@@ -1,5 +1,5 @@
 from django.contrib import messages
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.http import Http404
 from .models import News, Review, Service
 from .forms import ConsultationForm
@@ -40,15 +40,9 @@ def index(request):
     return render(request, 'home_app/index.html', context=context)
 
 
-
 # Детальный взгляд на пост
 def news_detail(request, slug):
-
-    # Если пост с таким slug не будет найден => Http404
-    try:
-        news_obj = News.object.filter(slug=slug)
-    except News.DoesNotExist:
-        raise Http404('Такой новости нет.')
+    news_obj = get_object_or_404(News, slug=slug)
 
     context = {
         'title': 'Новости',
