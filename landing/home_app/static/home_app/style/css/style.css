@@ -371,6 +371,7 @@ button {
   font-weight: 600;
   line-height: 177.8%;
   transition: all .3s ease;
+  cursor: pointer;
 }
 
 .services_box_item_box_btn:hover {
@@ -442,6 +443,7 @@ button {
   line-height: 177.8%;
   transition: all .3s ease;
   z-index: 3;
+  cursor: pointer;
 }
 
 .audit_box_item_btn:hover{

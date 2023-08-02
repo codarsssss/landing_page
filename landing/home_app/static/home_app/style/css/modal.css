@@ -1,0 +1,139 @@
+
+.modal_block {
+    font-family: "namu-1990";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal{
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(237,237,237,1) 76%, rgba(230,230,230,1) 100%);
+    border-radius: 4px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.modal_header{
+    padding: 5px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    border: 1px solid transparent;
+    border-image: linear-gradient(91.65deg, #ecd8cd 12.88%, #da9c7b 100.32%);
+    -moz-border-image: -moz-linear-gradient(91.65deg, #ecd8cd 12.88%, #da9c7b 100.32%);
+    -webkit-border-image: -webkit-linear-gradient(91.65deg, #ecd8cd 12.88%, #da9c7b  100.32%);
+    border-image-slice: 1;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.modal_line {
+    margin: 0;
+
+}
+
+.modal_header > h1 {
+    padding: 5px;
+    margin-left: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 900;
+
+}
+
+.modal_header > svg {
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.modal_main{
+    padding: 5px;
+}
+
+.modal_form_item{
+    position: relative;
+    margin: 10px;
+    border: 1px solid transparent;
+    border-image: linear-gradient(91.65deg, #ecd8cd 12.88%, #d8ae97 100.32%);
+    -moz-border-image: -moz-linear-gradient(91.65deg, #ecd8cd 12.88%, #d8ae97 100.32%);
+    -webkit-border-image: -webkit-linear-gradient(91.65deg, #ecd8cd 12.88%, #d8ae97 100.32%);
+    border-image-slice: 1;
+}
+
+.modal_form_item > input{
+    position: relative;
+    height: 45px;
+    width: 100%;
+    background-color: #ffffff;
+    border: none;
+    font-weight: 400;
+    font-size: 18px;
+    padding: 0px 5px 0px 10px;
+}
+
+.modal_form_item > input::placeholder{
+    padding: 0px 5px 0px 10px;
+    font-size: 18px;
+}
+
+.modal_footer{
+    padding: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal_footer > button {
+    background-image: linear-gradient(91.65deg, #ecd8cd 12.88%, #d8ae97 100.32%);
+    color: transparent;
+    background-clip: text;
+    padding: 15px 20px;
+    color: white;
+    border-radius: 4px;
+    font-size: x-large;
+    margin-top: 15px;
+    transition: all .3s ease;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.modal_footer > button:hover{
+    transition: all .3s ease;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.footer_desc{
+    padding: 5px;
+    text-align: center;
+    width: 90%;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+.footer_desc > p > a{
+    color: gray;
+    white-space: nowrap;
+}
+
+.footer_desc > p > a:hover{
+    text-decoration: underline;
+}

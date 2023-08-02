@@ -7,11 +7,11 @@
         <title>Document</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link
             href="https://fonts.googleapis.com/css2?family=Brygada+1918:wght@500&family=Manrope:wght@300;400;500;600;700&family=Raleway:wght@500;600;700&display=swap"
             rel="stylesheet">
         <link rel="stylesheet" href="{% static 'home_app/style/css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'home_app/style/css/modal.css' %}">
         
     </head>
 
@@ -84,7 +84,7 @@
                             <h3 class="services_box_item_title">Сопровождение процедур банкротства</h3>
                             <p class="services_box_item_description">Подготовка подробного пошагового плана реализации проекта, который приведет к достижению цели с минимальными рисками.</p>
                             <div class="services_box_item_box">
-                                <button class="services_box_item_box_btn"><p class='text-white m-0'>Подробнее</p></button>
+                                <button class="services_box_item_box_btn"><p style='color: white; margin: 0;'>Подробнее</p></button>
                                 <p class="services_box_item_box_price">от 100 000 ₽</p>
                             </div>
                         </div>
@@ -93,7 +93,7 @@
                             <h3 class="services_box_item_title">Защита от субсидиарной ответственности</h3>
                             <p class="services_box_item_description">Помощь: должникам, кредиторам, контролирующим лицам должника, директорам, при спорах с налоговым органом</p>
                             <div class="services_box_item_box">
-                                <button class="services_box_item_box_btn"><p class='text-white m-0'>Подробнее</p></button>
+                                <button class="services_box_item_box_btn"><p style='color: white; margin: 0;'>Подробнее</p></button>
                                 <p class="services_box_item_box_price">от 100 000 ₽</p>
                             </div>
                         </div>
@@ -102,7 +102,7 @@
                             <h3 class="services_box_item_title">Помощь во взыскании долговых обязательств</h3>
                             <p class="services_box_item_description">Взыскиваем: судебные расходы, взыскание расходов, вызванных проведением проверок, налоговые споры</p>
                             <div class="services_box_item_box">
-                                <button class="services_box_item_box_btn"><p class='text-white m-0'>Подробнее</p></button>
+                                <button class="services_box_item_box_btn"><p style='color: white; margin: 0;'>Подробнее</p></button>
                                 <p class="services_box_item_box_price">от 100 000 ₽</p>
                             </div>
                         </div>
@@ -112,7 +112,7 @@
                             <p class="services_box_item_description">-Взыскание дебиторской задолженности
                                 <br>-Ведение дел о банкротстве при наличии долгов</p>
                             <div class="services_box_item_box">
-                                <button class="services_box_item_box_btn"><p class='text-white m-0'>Подробнее</p></button>
+                                <button class="services_box_item_box_btn"><p style='color: white; margin: 0;'>Подробнее</p></button>
                                 <p class="services_box_item_box_price">от 100 000 ₽</p>
                             </div>
                         </div>
@@ -130,14 +130,14 @@
                             <img src="{% static 'home_app/img/audit_icon.png' %}" class="audit_box_item_icon">
                             <h3 class="audit_box_item_title">Чек-лист</h3>
                             <p class="audit_box_item_description">Для самостоятельного аудита рисков привлечения к субсидиарной отвтетственности</p>
-                            <button class="audit_box_item_btn"><p class='text-white m-0'>Получить</p></button>
+                            <button class="audit_box_item_btn"><p style='color: white; margin: 0;'>Получить</p></button>
                             <img src="{% static 'home_app/img/audit_bac1.png' %}" class="audit_box_item_bac">
                         </div>
                         <div class="audit_box_item">
                             <img src="{% static 'home_app/img/audit_icon.png' %}" class="audit_box_item_icon">
                             <h3 class="audit_box_item_title">Консультация</h3>
                             <p class="audit_box_item_description">Получите экспертную и честную оценку перспективы дела на 30-ти минутной консультации</p>
-                            <button class="audit_box_item_btn"><p class='text-white m-0'>Заказать</p></button>
+                            <button class="audit_box_item_btn"><p style='color: white; margin: 0;'>Заказать</p></button>
                             <img src="{% static 'home_app/img/audit_bac2.png' %}" class="audit_box_item_bac"></div>
                     </div>
                 </div>
@@ -300,65 +300,46 @@
             </footer>
         </div>
         
-                {#modal contact#}
-                <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                     aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Заказ обратного звонка</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body ">
-                            <form method="POST">
-                                {% csrf_token %}
-                                <div class="input-group input-group-lg">
-                                    {#                                        <span class="input-group-text" id="inputGroup-sizing-lg">Имя</span>#}
-                                    <input name="username" type="text" class="form-control mb-2"
-                                           placeholder="Имя" aria-label="Sizing example input"
-                                           aria-describedby="inputGroup-sizing-lg">
-                                </div>
-                                <div class="input-group input-group-lg">
-                                    {#                                        <span class="input-group-text" id="inputGroup-sizing-lg">Телефон</span>#}
-                                    <input name="number" type="text" class="form-control telmask"
-                                           placeholder="Телефон" maxlength="12"
-                                           aria-label="Sizing example input"
-                                           aria-describedby="inputGroup-sizing-lg">
-                                </div>
-                                <div class="modal-footer justify-content-center ps-0">
-                                    <div class="container-fluid ps-0 ">
+        {#modal contact#}
 
-                                        <div class="row ">
 
-                                            <div class="col justify-content-center">
-                                                <p class="h5 text-center ">Нажимая на кнопку, вы
-                                                    соглашаетесь с <br><a class="text-secondary fw-light text-decoration-underline"
-                                                            href="#}">политикой
-                                                        конфиденциальности</a></p>
-                                            </div>
-                                        </div>
-                                        <div class="row justify-content-center">
-                                            <div class="col d-flex justify-content-center">
+            <div class="modal_block">
+                <div class="modal">
 
-                                                    <button type="submit" class="modal_sub_btn"
-                                                            data-bs-dismiss="modal">
-                                                        Оставить
-                                                        заявку
-                                                    </button>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        </div>
+                    <div class="modal_header">
+                        <h1>Заказ обратного звонка</h1>
+                        <svg width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12H18M12 18V6" stroke="gray" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                     </div>
+
+
+                    <div class="modal_main">
+                        <form method="post">
+                            {% csrf_token %}
+                            <div class="modal_form_item">
+                                <input type="text" name="username" placeholder="Имя">
+                            </div>
+
+                            <div class="modal_form_item">
+                                <input type="text" name="number" placeholder="Телефон">
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="modal_footer">
+                        <div class="footer_desc">
+                            <p>Нажимая на кнопку, вы соглашаетесь с <a href="#">Политикой конфиденциальности</a></p>
+                        </div>
+                        <button class="modal_btn">Оставить заявку</button>
+                    </div>
+
                 </div>
             </div>
-            {#modal contact#}
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+        {#modal contact#}
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </body>
 
 </html>
