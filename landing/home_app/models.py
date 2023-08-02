@@ -64,12 +64,18 @@ class Consultation(models.Model):
         return self.username
 
 
+# Создаёт путь, по которому будет находиться фото новости
+# Указание slug позволит скрипту быстрее находить нужный файл
+def news_photo_path(instance, filename):
+    return 'news_photo/slug_{0}/{1}'.format(instance.slug, filename)
+
+
 # Модель новостей
 class News(models.Model):
 
     title = models.CharField(max_length=255, verbose_name='Заголовок')
     slug = models.SlugField(verbose_name='Слаг поста')
-    image = models.ImageField(verbose_name='Фото', upload_to='news_photo/')
+    image = models.ImageField(verbose_name='Фото', upload_to=news_photo_path)
     text = models.TextField(verbose_name='Текст новости')
     active = models.BooleanField(default=1, verbose_name='Активна/Не активна')
     create_datetime = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
