@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models.query import QuerySet
 
 # Create your models here.
 
@@ -54,6 +55,7 @@ class Consultation(models.Model):
     class Status(models.TextChoices):
         CALLED_BACK = 'ДА', 'ПЕРЕЗВОНИЛИ'
         NO_CALLED_BACK = 'НЕТ', 'НЕ ПЕРЕЗВОНИЛИ'
+
     username = models.CharField(max_length=100, verbose_name='Имя')
     number = models.CharField(max_length=12, verbose_name='Номер телефона')
     status = models.CharField(max_length=3, choices=Status.choices, 
@@ -76,15 +78,29 @@ def news_photo_path(instance, filename):
     return 'news_photo/slug_{0}/{1}'.format(instance.slug, filename)
 
 
+class PublishedManager(models.Manager):
+    def get_queryset(self) -> QuerySet:
+        return super().get_queryset().filter(
+            status=News.Status.PUBLISHED)
+
+
 # Модель новостей
 class News(models.Model):
+
+    class Status(models.TextChoices):
+        NOT_PUBLISHED = 'Нет', 'Не опубликована'
+        PUBLISHED = 'Да', 'Опубликована'
 
     title = models.CharField(max_length=255, verbose_name='Заголовок')
     slug = models.SlugField(verbose_name='Слаг поста')
     image = models.ImageField(verbose_name='Фото', upload_to=news_photo_path)
     text = models.TextField(verbose_name='Текст новости')
-    active = models.BooleanField(default=1, verbose_name='Активна/Не активна')
+    status = models.CharField(verbose_name='Статус', max_length=3,
+                              choices=Status.choices, default=Status.NOT_PUBLISHED)
     create_datetime = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
+
+    objects = models.Manager() # Менеджер, применяемый по умолчанию
+    published = PublishedManager() # Конкретно-прикладной менеджер
 
     class Meta:
         ordering = ['-create_datetime']

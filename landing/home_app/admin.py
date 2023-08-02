@@ -7,14 +7,14 @@ from django.contrib.auth.models import User, Group
 @admin.register(News)
 class AdminNews(admin.ModelAdmin):
     list_display = ['title', 'slug', 'image', 'text', 
-                    'create_datetime', 'active']
+                    'create_datetime', 'status']
     
     # Этот атрибут нужен для того, чтобы поле slug создавалось
     # автоматически. Работает только в админке!!!
     prepopulated_fields = {'slug': ('title',)}
-    list_filter = ['active', 'create_datetime']
+    list_filter = ['status', 'create_datetime']
     search_fields = ['title', 'slug', 'text']
-    ordering = ['active', '-create_datetime']
+    ordering = ['status', '-create_datetime']
     readonly_fields = ['create_datetime']
 
 
