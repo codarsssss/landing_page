@@ -27,4 +27,5 @@ class ConsultationForm(forms.ModelForm):
 class NewsForm(forms.ModelForm):
     class Meta:
         model = News
-        fields = ['title', 'create_datetime', 'text', 'image']
+        fields = ['title', 'text', 'image']
+

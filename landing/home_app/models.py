@@ -75,7 +75,7 @@ class Consultation(models.Model):
 # Создаёт путь, по которому будет находиться фото новости
 # Указание slug позволит скрипту быстрее находить нужный файл
 def news_photo_path(instance, filename):
-    return 'news_photo/slug_{0}/{1}'.format(instance.slug, filename)
+    return 'news_photo/slug_{}/{}'.format(instance.slug, filename)
 
 
 """

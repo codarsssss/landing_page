@@ -1,10 +1,30 @@
-from django.shortcuts import render
+from django.contrib import messages
+from django.shortcuts import render, redirect
 from django.http import Http404
 from .models import News, Review, Service
+from .forms import ConsultationForm
+
+
+def handle_form(request, form_class):
+    form = form_class(request.POST)
+    if form.is_valid():
+        # asyncio.run(send_telegram_message(f'{form.instance.username}-{form.instance.number}'))
+        form.save()
+        messages.success(request, "Скоро мы с Вами свяжемся для консультации")
+        request.session['username'] = request.POST.get('username')
+        return True
+    else:
+        form = form_class()
+        return False
+
 
 
 # Главная страница
 def index(request):
+
+    if request.method == 'POST':
+        if handle_form(request, ConsultationForm):
+            return redirect('/')
 
     news = News.published.all() # Все новости, у которых status = Published
     review = Review.objects.filter(active=True) # Все активные отзывы
