@@ -1092,3 +1092,22 @@ button {
     opacity: 0.8000000119;
   }
 }
+
+.modal_sub_btn {
+  background-image: linear-gradient(91.65deg, #ecd8cd 12.88%, #d8ae97 100.32%);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.modal_sub_btn::before {
+  content: "";
+  inset: 0;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background: linear-gradient(91.65deg, #ecd8cd 12.88%, #d8ae97 100.32%) border-box;
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
