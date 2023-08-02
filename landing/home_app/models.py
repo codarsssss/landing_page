@@ -78,7 +78,7 @@ def news_photo_path(instance, filename):
     return 'news_photo/slug_{0}/{1}'.format(instance.slug, filename)
 
 
-class PublishedManager(models.Manager):
+class NewsPublishedManager(models.Manager):
     def get_queryset(self) -> QuerySet:
         return super().get_queryset().filter(
             status=News.Status.PUBLISHED)
@@ -100,7 +100,7 @@ class News(models.Model):
     create_datetime = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
 
     objects = models.Manager() # Менеджер, применяемый по умолчанию
-    published = PublishedManager() # Конкретно-прикладной менеджер
+    published = NewsPublishedManager() # Конкретно-прикладной менеджер
 
     class Meta:
         ordering = ['-create_datetime']
