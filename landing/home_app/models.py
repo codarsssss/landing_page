@@ -30,7 +30,8 @@ class Review(models.Model):
     name = models.CharField(max_length=255, verbose_name='Имя')
     email = models.EmailField(verbose_name='Email', blank=True)
     body = models.TextField(verbose_name='Текст отзыва')
-    create_date = models.DateTimeField(verbose_name='Дата создания')
+    create_date = models.DateTimeField(auto_now_add=True,
+                                       verbose_name='Дата создания')
     active = models.BooleanField(default=1, verbose_name='Активные/Не активный')
 
 
@@ -68,8 +69,9 @@ class News(models.Model):
 
     title = models.CharField(max_length=255, verbose_name='Заголовок')
     slug = models.SlugField(verbose_name='Слаг поста')
-    image = models.ImageField(verbose_name='Фото')
+    image = models.ImageField(verbose_name='Фото', upload_to='news_photo/')
     text = models.TextField(verbose_name='Текст новости')
+    active = models.BooleanField(default=1, verbose_name='Активна/Не активна')
     create_datetime = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
 
     class Meta:

@@ -1,17 +1,19 @@
 from django.shortcuts import render
 from django.http import Http404
-from .models import News, Review
+from .models import News, Review, Service
 
 
 # Главная страница
 def index(request):
 
-    news = News.objects.filter(active=True)
-    review = Review.objects.filter(active=True)
+    news = News.objects.filter(active=True) # Все активные новости
+    review = Review.objects.filter(active=True) # Все активные отзывы
+    service = Service.objects.filter(active=True) # Все активные услуги
 
     context = {
         'title': 'Главная страница',
-        'Review': review,
+        'Services': service,
+        'Reviews': review,
         'News': news
     }
 
