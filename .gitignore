@@ -160,3 +160,4 @@ cython_debug/
 #.idea/
 
 /landing/home_app/migrations/*.py
+/landing/media/

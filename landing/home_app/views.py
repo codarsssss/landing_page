@@ -24,6 +24,7 @@ def index(request):
 # Детальный взгляд на пост
 def news_detail(request, slug):
 
+    # Если пост с таким slug не будет найден => Http404
     try:
         news_obj = News.object.filter(slug=slug)
     except News.DoesNotExist:

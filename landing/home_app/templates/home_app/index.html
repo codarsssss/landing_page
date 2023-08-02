@@ -254,9 +254,17 @@
                     <h2 class="news_title">МЕДИА</h2>
                     <p class="news_subtitle">Новости и публикации</p>
                     <div class="news_media">
-                        <div class="news_media_item"></div>
-                        <div class="news_media_item"></div>
-                        <div class="news_media_item"></div>  
+
+                        {% if News %}
+                            {% for new in News %}
+
+                                <div class="news_media_item">
+                                    {{new.title}}
+                                </div>
+                            
+                            {% endfor %}
+                        {% endif %}
+
                     </div>
                 </div>
             </section>
