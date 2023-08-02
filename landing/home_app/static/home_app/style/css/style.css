@@ -333,7 +333,8 @@ button {
 
 .services_box_item:hover{
   transition: all .3s ease;
-
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  transform: scale(1.01);
 }
 
 .services_box_item_icon {
@@ -374,7 +375,7 @@ button {
 
 .services_box_item_box_btn:hover {
   color: white;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.329);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   transition: all .3s ease;
 }
 
@@ -439,11 +440,20 @@ button {
   font-style: normal;
   font-weight: 600;
   line-height: 177.8%;
+  transition: all .3s ease;
+  z-index: 3;
 }
+
+.audit_box_item_btn:hover{
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  transition: all .3s ease;
+}
+
 .audit_box_item_bac {
   position: absolute;
   right: 0;
   bottom: 0;
+  z-index: -1;
 }
 
 .about {
@@ -1130,7 +1140,7 @@ button {
 }
 
 .modal_sub_btn:hover {
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.329);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   transition: all .3s ease;
 }
 
