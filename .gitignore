@@ -162,3 +162,4 @@ cython_debug/
 /landing/home_app/migrations/*.py
 /landing/media/
 /.idea/*
+/.vscode/

@@ -1,45 +1,8 @@
-<!DOCTYPE html>
+{% extends 'home_app/base.html' %}
 {% load static %}
-<html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Brygada+1918:wght@500&family=Manrope:wght@300;400;500;600;700&family=Raleway:wght@500;600;700&display=swap"
-            rel="stylesheet">
-        <link rel="stylesheet" href="{% static 'home_app/style/css/style.css' %}">
-        <link rel="stylesheet" href="{% static 'home_app/style/css/modal.css' %}">
-        
-    </head>
 
-    <body>
-        <div class="wrapper">
-            <section class="first_screen">
-                <header class="header" id="header">
-                    <div class="container header_container">
-                     <div class="logo">
-                        <img src="{% static 'home_app/img/logo.png' %}" alt="Логотип">
-                     </div>
-                     <p class="header_title">Чебучакова Татьяна</p>
-                     <nav class="header_nav">
-                        <ul>
-                            <li><a href="#services">Услуги</a></li>
-                            <li><a href="#about">Об эксперте</a></li>
-                            <li><a href="#reviews">Отзывы</a></li>
-                        </ul>
-                     </nav>
-                     <div class="header_email"><a href="#">info@chebuchakova.ru</a></div>
-                     <div class="header_phones">
-                        <p class="header_phone">+7 900 200-39-39</p>
-                        <button class="header_phone_btn" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal">Заказать звонок</button>
-                     </div>
-                    </div>
-                </header>
-                <div class="first_screen_content">
+{% block header %}
+     <div class="first_screen_content">
                     <div class="container">
                         <div class="first_screen_left">
                             <button class="first_screen_left_btn_fist"><a href="#">Адвокат, арбитражный управляющий</a></button>
@@ -54,7 +17,7 @@
                                 data-bs-target="#exampleModal">Получить консультацию</button>
                                 <div class="first_screen_left_box_btn_background"></div>
                             </div>
-                            
+
                         </div>
                         <div class="first_screen_right">
                             <div class="first_screen_right_item">
@@ -70,7 +33,12 @@
                     </div>
                 </div>
                 <img src="{% static 'home_app/img/crop_first_screen.png' %}" class="first_screen_crop">
-            </section>
+
+{% endblock %}
+
+{% block content %}
+
+
             <section class="services" id="services">
                 <div class="container">
                     <h2 class="services_title">УСЛУГИ</h2>
@@ -272,74 +240,5 @@
                     </div>
                 </div>
             </section>
-            <footer class="footer">
-                <header class="header">
-                    <div class="container header_container">
-                     <div class="logo">
-                        <img src="{% static 'home_app/img/logo.png' %}" alt="Логотип">
-                     </div>
-                     <p class="header_title">Чебучакова Татьяна</p>
-                     <nav class="header_nav">
-                        <ul>
-                            <li><a href="#">Услуги</a></li>
-                            <li><a href="#">Об эксперте</a></li>
-                            <li><a href="#">Отзывы</a></li>
-                        </ul>
-                     </nav>
-                     <div class="header_email"><a href="#">info@chebuchakova.ru</a></div>
-                     <div class="header_phones">
-                        <p class="header_phone">+7 900 200-39-39</p>
-                        <button class="header_phone_btn">Заказать звонок</button>
-                     </div>
-                     <button class="footer_up"><a href="#header"><img src="{% static 'home_app/img/arrow.png' %}" alt=""></a></button>
-                    </div>
-                </header>
-                <div class="container">
-                    <p class="footer_confidentiality">Политика конфиденциальности</p>
-                </div>
-            </footer>
-        </div>
-        
-        {#modal contact#}
 
-
-            <div class="modal_block">
-                <div class="modal">
-
-                    <div class="modal_header">
-                        <h1>Заказ обратного звонка</h1>
-                        <svg width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6 12H18M12 18V6" stroke="gray" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-
-
-                    <div class="modal_main">
-                        <form method="post">
-                            {% csrf_token %}
-                            <div class="modal_form_item">
-                                <input type="text" name="username" placeholder="Имя">
-                            </div>
-
-                            <div class="modal_form_item">
-                                <input type="text" name="number" placeholder="Телефон">
-                            </div>
-                        </form>
-                    </div>
-
-                    <div class="modal_footer">
-                        <div class="footer_desc">
-                            <p>Нажимая на кнопку, вы соглашаетесь с <a href="#">Политикой конфиденциальности</a></p>
-                        </div>
-                        <button class="modal_btn">Оставить заявку</button>
-                    </div>
-
-                </div>
-            </div>
-
-
-        {#modal contact#}
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    </body>
-
-</html>
+{% endblock %}
