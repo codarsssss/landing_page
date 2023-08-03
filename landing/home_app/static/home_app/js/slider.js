@@ -4,3 +4,5 @@ $('.reviews_block').slick({
   autoplay: true,
   autoplaySpeed: 1500,
 });
+
+
