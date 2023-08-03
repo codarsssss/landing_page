@@ -9,10 +9,14 @@
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 100;
 
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.modal_block.active {
+    display: flex;
 }
 
 .modal{

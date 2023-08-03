@@ -34,8 +34,7 @@
                 <div class="header_email"><a href="#">info@chebuchakova.ru</a></div>
                 <div class="header_phones">
                     <p class="header_phone">+7 900 200-39-39</p>
-                    <button class="header_phone_btn" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">Заказать звонок
+                    <button class="header_phone_btn modal_call">Заказать звонок
                     </button>
                 </div>
             </div>
@@ -65,7 +64,7 @@
                 <div class="header_email"><a href="#">info@chebuchakova.ru</a></div>
                 <div class="header_phones">
                     <p class="header_phone">+7 900 200-39-39</p>
-                    <button class="header_phone_btn">Заказать звонок</button>
+                    <button class="header_phone_btn modal_call">Заказать звонок</button>
                 </div>
                 <button class="footer_up"><a href="#header"><img src="{% static 'home_app/img/arrow.png' %}" alt=""></a>
                 </button>
@@ -84,7 +83,7 @@
 
         <div class="modal_header">
             <h1>Заказ обратного звонка</h1>
-            <svg width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="close_btn" width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6 12H18M12 18V6" stroke="gray" stroke-width="1.5" stroke-linecap="round"
                       stroke-linejoin="round"/>
             </svg>
@@ -95,7 +94,7 @@
             <form method="post">
                 {% csrf_token %}
                 <div class="modal_form_item">
-                    <input type="text" name="username" placeholder="Имя">
+                    <input type="text" maxlength="100" name="username" placeholder="Имя">
                 </div>
 
                 <div class="modal_form_item">
@@ -120,6 +119,7 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 <script src="{% static 'home_app/js/mask_for_input.js' %}"></script>
+<script src="{% static 'home_app/js/modal_logic.js' %}"></script>
 </body>
 
 </html>
