@@ -8,7 +8,7 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: -100;
-    transition: all .3s ease-in;
+    transition: all .1s ease-in;
 
     display: flex;
     flex-direction: column;
@@ -19,7 +19,7 @@
 }
 
 .modal_block.active {
-    transition: all .3s ease-in;
+    transition: all .1s ease-in;
     z-index: 100;
     opacity: 1;
     

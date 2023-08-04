@@ -162,6 +162,7 @@ button {
   z-index: 2;
   color: white;
   transition: all .3s ease;
+  cursor: pointer;
 }
 
 
@@ -283,6 +284,7 @@ button {
   line-height: 110.8%;
   padding: 10px 51px;
   color: var(--white);
+  cursor: pointer;
 }
 
 .services {
