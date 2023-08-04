@@ -6,6 +6,7 @@ const modal_close_btn = document.querySelector('.close_btn');
 
 let toggleModal = function toggleModal() {
     modal_block.classList.toggle('active');
+    modal_wrapper.classList.toggle('anim');
 };
 
 for (let i = 0; i < btn.length; ++i){
