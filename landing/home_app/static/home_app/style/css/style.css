@@ -1162,3 +1162,29 @@ button {
   -webkit-mask-composite: xor;
   mask-composite: exclude;
 }
+
+.news_media_item {
+  display: flex;
+  height: 300px;
+  margin: 20px;
+}
+
+.news_media_item .content {
+  flex: 1;
+  padding: 20px;
+}
+
+.news_media_item .image {
+  flex: 1;
+  overflow: hidden;
+}
+
+.news_media_item .image img {
+  width: 347px;
+
+
+}
+
+.mute-text {
+  color: grey;
+}

@@ -217,10 +217,18 @@
                         {% if News %}
                             {% for new in News %}
                                 <div class="news_media_item">
-                                    <h1>{{new.title}}</h1>
+                                    <div class="content">
+                                        <h1 style="">{{new.title}}</h1>
+                                        <p>{{new.text|truncatewords:10}}</p>
 
-                                    <img src="{{ new.image.url }}" alt="">
-                                    <p>{{new.text}}</p>
+                                    </div>
+                                    <div class="image">
+                                        <img src="{{ new.image.url }}">
+                                        <p class="mute-text">{{ new.create_datetime }}</p>
+                                    </div>
+
+
+
                                 </div>
                             {% endfor %}
                         {% endif %}
