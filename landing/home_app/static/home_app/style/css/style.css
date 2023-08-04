@@ -36,6 +36,10 @@ button {
   border: 0;
 }
 
+.body.block{
+  overflow: hidden;
+}
+
 .container {
   max-width: var(--container_width);
   margin: 0 auto;
