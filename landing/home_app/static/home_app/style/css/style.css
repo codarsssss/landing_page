@@ -1177,10 +1177,16 @@ button {
 .news_media_item .image {
   flex: 1;
   overflow: hidden;
+  height: 300px;
+  width: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*background-position: center;*/
 }
 
 .news_media_item .image img {
   width: 347px;
+  height: auto;
 
 
 }
@@ -1188,3 +1194,4 @@ button {
 .mute-text {
   color: grey;
 }
+

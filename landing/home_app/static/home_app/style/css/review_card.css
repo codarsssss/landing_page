@@ -1,0 +1,38 @@
+.reviews_block {
+    min-height: 500px;
+}
+
+.reviews_media_item {
+    min-height: 500px;
+
+}
+
+.review-img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-size: cover;
+    /*background-position: center;*/
+    background-repeat: no-repeat;
+}
+
+.review-header {
+    display: flex;
+    flex-direction: column;
+    /*justify-content: end;*/
+    align-items: center;
+}
+
+
+.review-header > p:nth-child(2) {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.card-body-text {
+    margin-bottom: 10px;
+    max-height: 5.6rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

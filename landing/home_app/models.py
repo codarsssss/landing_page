@@ -25,12 +25,16 @@ class Service(models.Model):
         return self.title
     
 
+def review_photo_path(instance, filename):
+    return 'review_photo/id_{}/{}'.format(instance.pk, filename)
+
+
 # Модель отзывов
 class Review(models.Model):
 
     name = models.CharField(max_length=255, verbose_name='Имя')
-    email = models.EmailField(verbose_name='Email', blank=True)
     body = models.TextField(verbose_name='Текст отзыва')
+    image = models.ImageField(verbose_name='Фото', upload_to=review_photo_path, default=None)
     create_date = models.DateTimeField(auto_now_add=True,
                                        verbose_name='Дата создания')
     active = models.BooleanField(default=1, verbose_name='Активные/Не активный')

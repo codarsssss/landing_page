@@ -6,7 +6,7 @@ from django import forms
 class ReviewForm(forms.ModelForm):
     class Meta:
         model = Review
-        fields = ['name', 'email', 'body']
+        fields = ['name', 'body']
 
 
 # Форма для добавления услуг

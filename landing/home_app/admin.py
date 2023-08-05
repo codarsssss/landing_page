@@ -21,7 +21,7 @@ class AdminNews(admin.ModelAdmin):
 # Отзывы в админ панеле
 @admin.register(Review)
 class AdminReview(admin.ModelAdmin):
-    list_display = ['name', 'email', 'body', 'create_date',
+    list_display = ['name', 'body', 'create_date',
                     'active']
     list_filter = ['active', 'create_date']
     search_fields = ['body', 'name']
