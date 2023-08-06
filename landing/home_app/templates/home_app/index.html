@@ -168,21 +168,25 @@
                 <div class="container">
                     <h2 class="reviews_title">ОТЗЫВЫ</h2>
                     <p class="reviews_subtitle">Отзывы клиентов</p>
-                    <div class="reviews_block ">
-                        {% for card in Reviews %}
-                        <div class="reviews_media_item">
-                            <div class="card-body-container">
-                                <p class="card-body-text">{{ card.body }}</p>
-                                <a href="#" class="read-more-btn">читать полностью</a>
+
+                    <div class="reviews_block swiper mySwiper">
+                        <div class='swiper-wrapper'>
+                            {% for card in Reviews %}
+                            <div class="swiper-slide reviews_media_item">
+                                <div class="card-body-container">
+                                    <p class="card-body-text">{{ card.body }}</p>
+                                    <a href="#" class="read-more-btn">читать полностью</a>
+                                </div>
+                                <div class="review-header">
+                                    <div style="background-image: url('{{ card.image.url }}')" class="review-img"></div>
+                                    <p>{{ card.name }}</p>
+                                    <p>{{ card.create_date }}</p>
+                                </div>
                             </div>
-                            <div class="review-header">
-                                <div style="background-image: url('{{ card.image.url }}')" class="review-img"></div>
-                                <p>{{ card.name }}</p>
-                                <p>{{ card.create_date }}</p>
-                            </div>
+                            {% endfor %}
                         </div>
-                        {% endfor %}
                     </div>
+
                 </div>
                 <img src="{% static 'home_app/img/crop_reviews.png' %}" class="reviews_crop">
             </section>
@@ -220,26 +224,25 @@
                 <div class="container">
                     <h2 class="news_title">МЕДИА</h2>
                     <p class="news_subtitle ">Новости и публикации</p>
-                    <div class="news_media reviews_block">
+
+                    <div class="news_media swiper mySwiper_1">
+
+                        <div class="swiper-wrapper">
                         {% if News %}
                             {% for new in News %}
-                                <div class="news_media_item">
+                                <div class="swiper-slide news_media_item">
                                     <div class="content">
-                                        <h1 style="">{{new.title}}</h1>
+                                        <h1>{{new.title}}</h1>
                                         <p>{{new.text|truncatewords:10}}</p>
                                         <p class="mute-text">{{ new.create_datetime }}</p>
-
                                     </div>
                                     <div class="image" style="background-image: url('{{ new.image.url }}')">
-
-
                                     </div>
-
-
-
                                 </div>
                             {% endfor %}
                         {% endif %}
+                        </div>
+
                     </div>
                 </div>
             </section>

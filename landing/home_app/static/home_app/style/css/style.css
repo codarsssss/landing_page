@@ -38,6 +38,7 @@ button {
 
 .body.block{
   overflow: hidden;
+  padding-right: 15px;
 }
 
 .container {
@@ -745,12 +746,12 @@ button {
 }
 .news_media {
   display: grid;
-  grid-template-columns: repeat(3, 360px);
+  grid-template-columns: repeat(3, 340px);
   justify-content: space-between;
   margin-top: 62px;
 }
 .news_media_item {
-  max-width: 360px;
+  max-width: 340px;
   height: 245px;
   border-radius: 18px;
   background: #f2f0ef;
@@ -1166,7 +1167,6 @@ button {
 .news_media_item {
   display: flex;
   height: 300px;
-  margin: 20px;
 }
 
 .news_media_item .content {

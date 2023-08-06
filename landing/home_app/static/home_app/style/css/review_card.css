@@ -1,9 +1,11 @@
 .reviews_block {
     min-height: 500px;
+    margin-top: 32px;
 }
 
 .reviews_media_item {
     min-height: 500px;
+    border: 1px solid gray;
 
 }
 
