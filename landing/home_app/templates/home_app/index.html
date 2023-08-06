@@ -172,17 +172,18 @@
                     <div class="reviews_block swiper mySwiper">
                         <div class='swiper-wrapper'>
                             {% for card in Reviews %}
-                            <div class="swiper-slide reviews_media_item">
-                                <div class="card-body-container">
-                                    <p class="card-body-text">{{ card.body }}</p>
-                                    <a href="#" class="read-more-btn">читать полностью</a>
+                                <div class="swiper-slide reviews_media_item">
+                                    <div class="review-header">
+                                        <div style="background-image: url('{{ card.image.url }}')"
+                                             class="review-img"></div>
+                                        <p>{{ card.name }}</p>
+                                        <p>{{ card.create_date }}</p>
+                                    </div>
+                                    <div class="card-body-container">
+                                        <p class="card-body-text">{{ card.body }}</p>
+                                        <a href="#" class="read-more-btn">читать полностью</a>
+                                    </div>
                                 </div>
-                                <div class="review-header">
-                                    <div style="background-image: url('{{ card.image.url }}')" class="review-img"></div>
-                                    <p>{{ card.name }}</p>
-                                    <p>{{ card.create_date }}</p>
-                                </div>
-                            </div>
                             {% endfor %}
                         </div>
                     </div>
@@ -232,11 +233,11 @@
                             {% for new in News %}
                                 <div class="swiper-slide news_media_item">
                                     <div class="content">
-                                        <h1>{{new.title}}</h1>
-                                        <p>{{new.text|truncatewords:10}}</p>
-                                        <p class="mute-text">{{ new.create_datetime }}</p>
-                                    </div>
-                                    <div class="image" style="background-image: url('{{ new.image.url }}')">
+                                        <div class="news-header">
+                                            <h1>{{new.title}}</h1>
+                                            <p class="mute-text">{{ new.create_datetime }}</p>
+                                        </div>
+                                        <p>{{new.text|truncatewords:40}}</p>
                                     </div>
                                 </div>
                             {% endfor %}

@@ -3,7 +3,7 @@ var swiper = new Swiper(".mySwiper", {
   spaceBetween: 60,
   loop: true,
   autoplay: {
-    delay: 1000,
+    delay: 5000,
   },
   breakpoints: {
     // when window width is >= 320px
@@ -30,7 +30,7 @@ var swiper = new Swiper(".mySwiper", {
 
 
 var swiper = new Swiper(".mySwiper_1", {
-  slidesPerView: 3,
+  slidesPerView: 2,
   spaceBetween: 60,
   loop: true,
   autoplay: {
@@ -58,4 +58,3 @@ var swiper = new Swiper(".mySwiper_1", {
     }
   }
 });
-

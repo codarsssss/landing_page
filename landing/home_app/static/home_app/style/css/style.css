@@ -1166,7 +1166,9 @@ button {
 
 .news_media_item {
   display: flex;
-  height: 300px;
+  height: 400px !important;
+
+  overflow: visible;
 }
 
 .news_media_item .content {
@@ -1174,24 +1176,21 @@ button {
   padding: 20px;
 }
 
-.news_media_item .image {
-  flex: 1;
-  overflow: hidden;
-  height: 300px;
-  width: auto;
-  background-size: cover;
-  background-repeat: no-repeat;
-  /*background-position: center;*/
-}
-
-.news_media_item .image img {
-  width: 347px;
-  height: auto;
-
-
-}
-
 .mute-text {
   color: grey;
 }
 
+.news-header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.news-header p {
+  background-color: yellow;
+  margin-right: -40px;
+}
+
+.news-header h1 {
+  max-width: 200px;
+}

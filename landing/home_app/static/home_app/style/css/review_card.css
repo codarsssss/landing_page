@@ -1,21 +1,26 @@
 .reviews_block {
-    min-height: 500px;
     margin-top: 32px;
+    text-align: center;
+    overflow: visible;
 }
 
 .reviews_media_item {
-    min-height: 500px;
-    border: 1px solid gray;
-
+    padding: 3vw;
+    background-color: #f0f1f4;
+    overflow: visible;
+    margin-top: 50px;
+    border-radius: 10%;
 }
 
 .review-img {
+    margin-top: -70px;
     height: 100px;
     width: 100px;
     border-radius: 50%;
     background-size: cover;
     /*background-position: center;*/
     background-repeat: no-repeat;
+
 }
 
 .review-header {
@@ -25,16 +30,25 @@
     align-items: center;
 }
 
-
 .review-header > p:nth-child(2) {
     font-weight: bold;
     font-size: 18px;
+    min-height: 50px;
+    padding-top: 3px;
+}
+
+.review-header > p:nth-child(3) {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    /*display: flex;*/
+    /*justify-content: flex-end;*/
+    /*width: 100%;*/
+
 }
 
 .card-body-text {
-    margin-bottom: 10px;
-    max-height: 5.6rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
     overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
 }
