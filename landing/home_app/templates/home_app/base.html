@@ -1,137 +1,186 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
             href="https://fonts.googleapis.com/css2?family=Brygada+1918:wght@500&family=Manrope:wght@300;400;500;600;700&family=Raleway:wght@500;600;700&display=swap"
             rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'home_app/style/css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'home_app/style/css/modal.css' %}">
-    <link rel="stylesheet" href="{% static 'home_app/style/css/review_card.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-
-</head>
-
-<body class='body'>
-<div class="wrapper">
-    <section class="first_screen">
-        <header class="header" id="header">
-            <div class="container header_container">
-                <div class="logo">
-                    <img src="{% static 'home_app/img/logo.png' %}" alt="Логотип">
-                </div>
-                <p class="header_title">Чебучакова Татьяна</p>
-                <nav class="header_nav">
-                    <ul>
-                        <li><a href="#services">Услуги</a></li>
-                        <li><a href="#about">Об эксперте</a></li>
-                        <li><a href="#reviews">Отзывы</a></li>
-                    </ul>
-                </nav>
-                <div class="header_email"><a href="#">info@chebuchakova.ru</a></div>
-                <div class="header_phones">
-                    <p class="header_phone">+7 900 200-39-39</p>
-                    <button class="header_phone_btn modal_call">Заказать звонок
-                    </button>
-                </div>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'home_app/style/css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'home_app/style/css/modal.css' %}">
+        <link rel="stylesheet" href="{% static 'home_app/style/css/review_card.css' %}">
+        <link rel="stylesheet" href="{% static 'home_app/style/css/normalize.css' %}">
+        <link rel="stylesheet" href="{% static 'home_app/style/css/responsive.css' %}">
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+            integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        >
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+            integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        >
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    </head>
+    <body class="body">
+        <header class="header container">
+            <div class="header__logo">
+              <img src="{% static 'home_app/img/logo.png' %}" alt="Логотип"/>
+              <h3>
+                Чебучакова <br />
+                Татьяна
+              </h3>
+            </div>
+      
+            <nav class="header__navigation">
+              <ul>
+                <li>
+                    <a href="#services">Услуги</a>
+                </li>
+                <li>
+                    <a href="#about">Об эксперте</a>
+                </li>
+                <li>
+                    <a href="#reviews">Отзывы</a>
+                </li>
+              </ul>
+            </nav>
+      
+            <div class="header__contacts">
+              <p>info@chebuchakova.ru</p>
+              <div class="contacts-phone">
+                <p>+7 900 200-39-39</p>
+                <button class="modal_call">Заказать звонок</button>
+              </div>
             </div>
         </header>
-        {% block header %}
-        {% endblock %}
 
-    </section>
-
-    {% block content %}
-    {% endblock %}
-
-    <footer class="footer">
-        <header class="header">
-            <div class="container header_container">
-                <div class="logo">
-                    <img src="{% static 'home_app/img/logo.png' %}" alt="Логотип">
-                </div>
-                <p class="header_title">Чебучакова Татьяна</p>
-                <nav class="header_nav">
-                    <ul>
-                        <li><a href="#">Услуги</a></li>
-                        <li><a href="#">Об эксперте</a></li>
-                        <li><a href="#">Отзывы</a></li>
-                    </ul>
-                </nav>
-                <div class="header_email"><a href="#">info@chebuchakova.ru</a></div>
-                <div class="header_phones">
-                    <p class="header_phone">+7 900 200-39-39</p>
-                    <button class="header_phone_btn modal_call">Заказать звонок</button>
-                </div>
-                <button class="footer_up"><a href="#header"><img src="{% static 'home_app/img/arrow.png' %}" alt=""></a>
-                </button>
-            </div>
-        </header>
-        <div class="container">
-            <p class="footer_confidentiality">Политика конфиденциальности</p>
-        </div>
-    </footer>
-</div>
-{#modal contact#}
-
-
-<div class="modal_block">
-    <div class="modal">
-
-        <div class="modal_header">
-            <h1>Заказ обратного звонка</h1>
-            <svg class="close_btn" width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 12H18M12 18V6" stroke="gray" stroke-width="1.5" stroke-linecap="round"
-                      stroke-linejoin="round"/>
-            </svg>
-        </div>
-
-
-        <div class="modal_main">
-            <form method="post">
-                {% csrf_token %}
-                <div class="modal_form_item">
-                    <input type="text" maxlength="100" name="username" placeholder="Имя">
-                </div>
-
-                <div class="modal_form_item">
-                    <input class="phone_mask" maxlength="12" minlength="12" type="text" name="number" placeholder="Телефон">
-                </div>
-            </form>
-        </div>
-
-        <div class="modal_footer">
-            <div class="footer_desc">
-                <p>Нажимая на кнопку, вы соглашаетесь с <a href="#">Политикой конфиденциальности</a></p>
-            </div>
-            <button class="modal_btn">Оставить заявку</button>
-        </div>
-
-    </div>
-</div>
-
-
-{#modal contact#}
-
-<script src="{% static 'home_app/js/mask_for_input.js' %}"></script>
-<script src="{% static 'home_app/js/modal_logic.js' %}"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
-        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <main>
+            {% block header %}
+            {% endblock %}
+            
+            {% block content %}
+            {% endblock %}
+        </main>
         
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
-<script src="{% static 'home_app/js/slider.js' %}"></script>
-</body>
-
+        <footer class="footer">
+            <div class="container">
+              <div class="footer__wrapper">
+                <div class="footer__logo">
+                  <img src="{% static 'home_app/img/logo.png' %}" alt="Логотип">
+                  <h3>Чебучакова Татьяна</h3>
+                </div>
+      
+                <nav class="footer__navigation">
+                  <ul>
+                    <li>
+                        <a href="#services">Услуги</a>
+                    </li>
+                    <li>
+                        <a href="#about">Об эксперте</a>
+                    </li>
+                    <li>
+                        <a href="#reviews">Отзывы</a>
+                    </li>
+                  </ul>
+                </nav>
+      
+                <div class="footer__contacts">
+                  <p>info@chebuchakova.ru</p>
+                  <div class="contacts-phone">
+                    <p>+7 900 200-39-39</p>
+                    <button>Заказать звонок</button>
+                  </div>
+                </div>
+              </div>
+      
+              <a class="footer__privacy-policy" href>Политика конфиденциальности</a>
+              <button class="footer_up">
+                <a href="#">
+                    <img src="{% static 'home_app/img/arrow.png' %}" alt="">
+                </a>
+             </button>
+            </div>
+        </footer>
+ 
+        {#modal contact#}
+        <div class="modal_block">
+            <div class="modal">
+                <div class="modal_header">
+                    <h1>Заказ обратного звонка</h1>
+                    <svg
+                        class="close_btn"
+                        width="35"
+                        height="35"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M6 12H18M12 18V6"
+                            stroke="gray"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                </div>
+                <div class="modal_main">
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="modal_form_item">
+                            <input
+                                type="text"
+                                maxlength="100"
+                                name="username"
+                                placeholder="Имя"
+                            >
+                        </div>
+                        <div class="modal_form_item">
+                            <input
+                                class="phone_mask"
+                                maxlength="12"
+                                minlength="12"
+                                type="text"
+                                name="number"
+                                placeholder="Телефон"
+                            >
+                        </div>
+                    </form>
+                </div>
+                <div class="modal_footer">
+                    <div class="footer_desc">
+                        <p>Нажимая на кнопку, вы соглашаетесь с
+                            <a href="#">Политикой конфиденциальности</a>
+                        </p>
+                    </div>
+                    <button class="modal_btn">Оставить заявку</button>
+                </div>
+            </div>
+        </div>
+        {#modal contact#}
+        <script src="{% static 'home_app/js/mask_for_input.js' %}"></script>
+        <script src="{% static 'home_app/js/modal_logic.js' %}"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+            integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <script src="{% static 'home_app/js/slider.js' %}"></script>
+    </body>
 </html>

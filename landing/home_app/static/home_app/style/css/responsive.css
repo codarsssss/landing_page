@@ -1,0 +1,371 @@
+@media only screen and (max-width: 1300px) {
+  .footer .wrapper,
+  .header {
+    padding-top: 11px;
+  }
+
+  .footer__contacts,
+  .header__contacts {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .footer__contacts p .header__contacts p {
+    margin-bottom: 4px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+    width: fit-content;
+  }
+
+  .hero__portrait {
+   width: 45vw;
+    right: calc(12vw + 50px);
+  }
+
+  .profile__biography {
+    flex-direction: column;
+    gap: 0px;
+    align-items: center;
+    padding-right: 0px;
+  }
+
+  .profile__biography-text {
+    text-align: center;
+  }
+
+  .profile__biography .job-title {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .profile__features {
+    flex-wrap: wrap;
+  }
+
+  .profile__work-principles {
+    flex-wrap: wrap;
+    gap: 0px;
+  }
+
+  .profile__work-principles div {
+    margin-left: 40px;
+  }
+
+  .profile__work-principles div:nth-child(2) {
+    padding-bottom: 40px;
+  }
+
+  .work-process__steps {
+    flex-wrap: wrap;
+    row-gap: 30px;
+  }
+
+  .work-process__step h3 {
+    font-size: 22px;
+    min-height: 50px;
+  }
+
+  .news_media {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+    width: 80%;
+    margin: 62px auto 0 auto;
+  }
+  .news_media_item {
+    max-width: 100%;
+    height: 500px;
+  }
+
+ 
+}
+
+@media only screen and (max-width: 1000px) {
+  .section-subtitle {
+    font-size: 12px;
+  }
+
+  section h2 {
+    font-size: 28px;
+  }
+
+  section p {
+    font-size: 14px;
+  }
+
+  .header {
+    width: auto;
+  }
+
+  .footer__logo h3,
+  .header__logo h3 {
+    display: none;
+  }
+
+  .header__contacts {
+    margin-top: 7px;
+  }
+
+  .contacts-phone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__contacts p,
+  .header__contacts p {
+    font-size: 12px;
+  }
+
+  .footer .contacts-phone p,
+  .header .contacts-phone p {
+    font-size: 16px;
+  }
+
+  .footer__contacts button,
+  .header__contacts button {
+    margin-left: 0px;
+    font-size: 12px;
+    width: 162px;
+    height: 25px;
+    padding: 5px 24px 5px 24px;
+  }
+
+  .job-title {
+    width: 206px;
+    height: 20px;
+    padding: 8px 39px 6px 15px;
+    font-size: 12px;
+  }
+
+  .hero__description {
+    align-self: center;
+  }
+
+  .hero__description ul li {
+    font-size: 14px;
+    background-size: 20px;
+    background-position-y: 5px;
+  }
+
+  .hero__description button {
+    font-size: 14px;
+    padding: 14px 20px 14px 20px;
+  }
+
+  .services__item {
+    background-size: 50px;
+    padding: 13px 20px 38px 20px;
+    border-radius: 18px;
+    background-position-y: 15px;
+    background-position-x: calc(100% - 15px);
+    min-width: 310px;
+  }
+
+  .services__item h3 {
+    font-size: 18px;
+    max-width: 260px;
+  }
+
+  .services__item .services__item-price {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  .services__item p {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 20px;
+    min-height: 9px;
+  }
+
+  .services__item button {
+    font-size: 14px;
+  }
+
+  .audit__item-wrapper {
+    padding: 26px 40px 21px 26px;
+    background-size: 100px;
+    background-position-y: bottom !important;
+  }
+
+  .audit h2 {
+    font-size: 24px;
+  }
+
+  .audit__item h3 {
+    font-size: 18px;
+  }
+
+  .audit__item p {
+    max-width: 240px;
+    font-size: 14px;
+  }
+
+  .audit__item button {
+    font-size: 14px;
+    padding: 10px 50px 10px 50px;
+  }
+
+  .profile__biography li {
+    font-size: 14px;
+  }
+
+  .profile__biography h2 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .profile__work-principles h3 {
+    font-size: 28px;
+  }
+
+  .profile__work-principles li {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .footer__logo,
+  .header__logo {
+    margin-right: 0px;
+  }
+
+  .footer__navigation ul,
+  .header__navigation ul {
+    gap: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .footer__contacts,
+  .header__contacts {
+    margin-right: auto;
+  }
+
+  .hero .container {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 140px;
+    padding-bottom: 370px;
+  }
+
+  .hero__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  .hero__achievements {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .hero__portrait{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 340px;
+  }
+
+  .reviews-list img {
+    height: 150px;
+  }
+
+  .reviews__clients img {
+    height: 100px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .header__logo img {
+    width: 50px;
+  }
+g
+  .header,
+  .footer__wrapper {
+    flex-wrap: wrap;
+  }
+
+  .header {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+  }
+
+  .header .container {
+    width: auto;
+  }
+
+  .hero .container {
+    padding-top: 220px;
+  }
+
+  .hero__description {
+    width: calc(100vw - 40px);
+  }
+
+  .hero__description h1 {
+    white-space: normal !important;
+    font-size: 24px;
+    width: calc(100%);
+    text-align: center;
+  }
+
+  .hero__description ul li {
+    white-space: normal;
+    padding-left: 30px;
+  }
+
+  .services__item {
+    min-width: 240px;
+    padding-bottom: 28px;
+  }
+
+  .services__item h3 {
+    font-size: 17px;
+    max-width: 80%;
+  }
+  .services__item button {
+    margin-bottom: 10px;
+  }
+
+  .audit__item p {
+    width: unset;
+  }
+
+  .profile__biography img {
+    width: 80vw;
+  }
+
+  .profile__biography h2 {
+    white-space: normal;
+  }
+
+  .profile__biography li {
+    background-size: 25px;
+    background-size: 20px;
+  }
+
+  .news_media {
+    width: 100%;
+  }
+  .news_media_item {
+    max-width: 100%;
+    height: 300px;
+  }
+}
