@@ -1177,7 +1177,12 @@ button {
 }
 
 .mute-text {
-  color: grey;
+  color: rgb(255, 255, 255);
+  padding: 15px;
+  border-radius: 4px;
+  font-size: large;
+  white-space: nowrap;
+  margin-left: 20px;
 }
 
 .news-header {
@@ -1187,10 +1192,11 @@ button {
 }
 
 .news-header p {
-  background-color: yellow;
-  margin-right: -40px;
+  background: linear-gradient(142deg, #ECD8CD 0%, #D8AE97 100%);
+  margin-right: -50px;
 }
 
 .news-header h1 {
   max-width: 200px;
+  white-space: nowrap;
 }

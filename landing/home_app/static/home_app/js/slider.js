@@ -30,7 +30,7 @@ var swiper = new Swiper(".mySwiper", {
 
 
 var swiper = new Swiper(".mySwiper_1", {
-  slidesPerView: 2,
+  slidesPerView: 3,
   spaceBetween: 60,
   loop: true,
   autoplay: {
