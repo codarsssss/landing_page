@@ -2,6 +2,7 @@
     margin-top: 32px;
     text-align: center;
     overflow: visible;
+    
 }
 
 .reviews_media_item {
@@ -11,7 +12,9 @@
     margin-top: 50px;
     border-radius: 10%;
     max-width: (33.3% - 240px);
+   
     padding-bottom: 20px;
+    
 }
 
 .review-img {
@@ -69,8 +72,15 @@
     padding-right: 3vw;
 }
 
-@media only screen and (max-width: 920px) {
-    .reviews_media_item {
-        min-width: calc(50% - 140px);
+@media only screen and (max-width: 720px) {
+    
+    .reviews_block {
+        max-width: 400px;
     }
+
+    .reviews_media_item {
+        width: 100%;
+        min-width: 280px !important;
+    }
+   
 }

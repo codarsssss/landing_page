@@ -51,7 +51,7 @@ section p {
 /* Шапка */
 .header {
   position: absolute;
-  width: 90%;
+  width: 89%;
   display: flex;
   align-items: center;
   color: white;
@@ -753,7 +753,7 @@ section p {
 .news-feed {
   background: #fcf9f8;
   padding-top: 100px;
-  padding-bottom: 110px;
+  padding-bottom: 140px;
 }
 .news-feed .section-subtitle {
   margin-bottom: 8px;
@@ -762,20 +762,6 @@ section p {
 .news-feed h2 {
   margin-top: 0px;
   margin-bottom: 60px;
-}
-
-.news_media {
-  display: grid;
-  grid-template-columns: repeat(3, 340px);
-  justify-content: space-between;
-  margin-top: 62px;
-}
-.news_media_item {
-  max-width: 340px;
-  height: 245px;
-  border-radius: 18px;
-  background: #f2f0ef;
-  overflow: hidden;
 }
 
 /* подвал */
@@ -902,7 +888,7 @@ section p {
   top: -120px;
   right: 100px;
 }
-/* -------------------------- */
+/* ------------ Модалка-------------- */
 
 
 .modal_sub_btn {
@@ -932,17 +918,31 @@ section p {
   -webkit-mask-composite: xor;
   mask-composite: exclude;
 }
+/* ------------ Блок с новостями-------------- */
+.news_media {
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  justify-content: space-between;
+  margin-top: 62px;
+  padding-right: 13px !important;
+}
 
 .news_media_item {
+  height: 245px;
+  max-width: 340px;
+  border-radius: 18px;
+  background: #f2f0ef;
+  overflow: hidden;
+
   display: flex;
   height: 400px !important;
-
   overflow: visible;
 }
 
 .news_media_item .content {
   flex: 1;
   padding: 20px;
+  word-wrap: break-word;
 }
 
 .mute-text {
@@ -951,16 +951,39 @@ section p {
 
 .news-header {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
 .news-header p {
+  width: 100px;
+  min-width: 100px;
   background-color: yellow;
   margin-right: -40px;
+  margin-top:10px;
+  font-size: 12px;
 }
 
-.news-header h1 {
+.news-header h3 {
+  font-size: 30px;
+  line-height: 30px;
   max-width: 200px;
+  margin-top: 0px;
+  padding-right: 15px;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+.news_media_item p{
+  font-size: 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 14;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-wrap: break-word;
 }
 

@@ -18,7 +18,6 @@ def handle_form(request, form_class):
         return False
 
 
-
 # Главная страница
 def index(request):
 
