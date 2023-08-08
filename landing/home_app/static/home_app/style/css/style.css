@@ -920,11 +920,11 @@ section p {
 }
 /* ------------ Блок с новостями-------------- */
 .news_media {
-  display: grid;
-  grid-template-columns: repeat(3, 340px);
+display: grid !important;
+  grid-template-columns: repeat(3, 330px);
   justify-content: space-between;
   margin-top: 62px;
-  padding-right: 13px !important;
+  /*padding-right: 13px !important;*/
 }
 
 .news_media_item {
@@ -946,7 +946,10 @@ section p {
 }
 
 .mute-text {
-  color: grey;
+  color: dimgray;
+  padding: 15px;
+  border-radius: 5px;
+
 }
 
 .news-header {
@@ -958,10 +961,11 @@ section p {
 .news-header p {
   width: 100px;
   min-width: 100px;
-  background-color: yellow;
+  background: linear-gradient(142deg, #ECD8CD 0%, #D8AE97 100%);
   margin-right: -40px;
   margin-top:10px;
   font-size: 12px;
+
 }
 
 .news-header h3 {

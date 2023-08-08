@@ -31,7 +31,7 @@ var swiper = new Swiper(".mySwiper", {
 
 var swiper = new Swiper(".mySwiper_1", {
   slidesPerView: 3,
-  spaceBetween: 60,
+  spaceBetween: 80,
   loop: true,
   autoplay: {
     delay: 1000,
@@ -49,12 +49,12 @@ var swiper = new Swiper(".mySwiper_1", {
     },
     // when window width is >= 640px
     720: {
-      slidesPerView: 2,
-      spaceBetween: 40
+      slidesPerView: 1,
+      spaceBetween: 80
     },
     920: {
       slidesPerView: 3,
-      spaceBetween: 60
+      spaceBetween: 80
     }
   }
 });
