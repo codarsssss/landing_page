@@ -2,7 +2,6 @@
     margin-top: 32px;
     text-align: center;
     overflow: visible;
-    
 }
 
 .reviews_media_item {
@@ -11,10 +10,7 @@
     overflow: visible;
     margin-top: 50px;
     border-radius: 10%;
-    max-width: calc(33.3% - 240px);
-   
     padding-bottom: 20px;
-    
 }
 
 .review-img {
@@ -23,15 +19,12 @@
     width: 100px;
     border-radius: 50%;
     background-size: cover;
-    /*background-position: center;*/
     background-repeat: no-repeat;
-
 }
 
 .review-header {
     display: flex;
     flex-direction: column;
-    /*justify-content: end;*/
     align-items: center;
     padding-left: 3vw;
     padding-right: 3vw;
@@ -54,10 +47,6 @@
     padding-top: 10px;
     padding-bottom: 20px;
     font-size: 16px;
-    /*display: flex;*/
-    /*justify-content: flex-end;*/
-    /*width: 100%;*/
-
 }
 
 .card-body-text {
@@ -82,5 +71,4 @@
         width: 100%;
         min-width: 280px !important;
     }
-   
 }
