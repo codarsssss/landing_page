@@ -11,7 +11,7 @@
     overflow: visible;
     margin-top: 50px;
     border-radius: 10%;
-    max-width: (33.3% - 240px);
+    max-width: calc(33.3% - 240px);
    
     padding-bottom: 20px;
     

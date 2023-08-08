@@ -920,7 +920,7 @@ section p {
 }
 /* ------------ Блок с новостями-------------- */
 .news_media {
-display: grid !important;
+  display: grid !important;
   grid-template-columns: repeat(3, 330px);
   justify-content: space-between;
   margin-top: 62px;
