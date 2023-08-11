@@ -326,7 +326,7 @@
                                         <h3>{{ new.title }}</h3>
                                         <p class="mute-text">{{ new.create_datetime }}</p>
                                     </div>
-                                    <p>{{ new.text|truncatewords:25 }}</p>
+                                    <p>{{ new.text|truncatewords:25|safe }}</p>
                                 </div>
                             </div>
                         </a>

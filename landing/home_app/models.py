@@ -2,8 +2,6 @@ from django.db import models
 from django.db.models.query import QuerySet
 
 
-# Create your models here.
-
 # Модель услуг
 class Service(models.Model):
     title = models.CharField(max_length=255, verbose_name='Наименование услуги',
