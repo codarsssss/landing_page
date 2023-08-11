@@ -1,11 +1,11 @@
 from django.db import models
 from django.db.models.query import QuerySet
 
+
 # Create your models here.
 
 # Модель услуг
 class Service(models.Model):
-
     title = models.CharField(max_length=255, verbose_name='Наименование услуги',
                              blank=False)
     description = models.CharField(max_length=255, verbose_name='Краткое описание',
@@ -23,7 +23,7 @@ class Service(models.Model):
 
     def __str__(self):
         return self.title
-    
+
 
 def review_photo_path(instance, filename):
     return 'review_photo/id_{}/{}'.format(instance.pk, filename)
@@ -31,7 +31,6 @@ def review_photo_path(instance, filename):
 
 # Модель отзывов
 class Review(models.Model):
-
     name = models.CharField(max_length=255, verbose_name='Имя')
     body = models.TextField(verbose_name='Текст отзыва')
     image = models.ImageField(verbose_name='Фото', upload_to=review_photo_path, blank=True)
@@ -39,28 +38,25 @@ class Review(models.Model):
                                        verbose_name='Дата создания')
     active = models.BooleanField(default=1, verbose_name='Активные/Не активный')
 
-
     class Meta:
         ordering = ['-create_date']
-        
+
         verbose_name = 'Отзыв'
         verbose_name_plural = 'Отзывы'
 
-    
     def __str__(self):
         return self.name
 
 
 # Модель заявок
 class Consultation(models.Model):
-
     class Status(models.TextChoices):
         CALLED_BACK = 'ДА', 'ПЕРЕЗВОНИЛИ'
         NO_CALLED_BACK = 'НЕТ', 'НЕ ПЕРЕЗВОНИЛИ'
 
     username = models.CharField(max_length=100, verbose_name='Имя')
     number = models.CharField(max_length=12, verbose_name='Номер телефона')
-    status = models.CharField(max_length=3, choices=Status.choices, 
+    status = models.CharField(max_length=3, choices=Status.choices,
                               default=Status.NO_CALLED_BACK, verbose_name='Статус')
     date_application = models.DateTimeField(auto_now_add=True, verbose_name='Дата заявки')
 
@@ -103,7 +99,6 @@ class NewsPublishedManager(models.Manager):
 
 # Модель новостей
 class News(models.Model):
-
     class Status(models.TextChoices):
         NOT_PUBLISHED = 'Нет', 'Не опубликована'
         PUBLISHED = 'Да', 'Опубликована'
@@ -116,8 +111,8 @@ class News(models.Model):
                               choices=Status.choices, default=Status.NOT_PUBLISHED)
     create_datetime = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
 
-    objects = models.Manager() # Менеджер, применяемый по умолчанию
-    published = NewsPublishedManager() # Конкретно-прикладной менеджер
+    objects = models.Manager()  # Менеджер, применяемый по умолчанию
+    published = NewsPublishedManager()  # Конкретно-прикладной менеджер
 
     class Meta:
         ordering = ['-create_datetime']
@@ -127,10 +122,3 @@ class News(models.Model):
 
     def __str__(self):
         return self.title
-    
-
-
-
-
-
-    # Hello
