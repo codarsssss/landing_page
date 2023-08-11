@@ -34,7 +34,7 @@ class Review(models.Model):
 
     name = models.CharField(max_length=255, verbose_name='Имя')
     body = models.TextField(verbose_name='Текст отзыва')
-    image = models.ImageField(verbose_name='Фото', upload_to=review_photo_path, default=None)
+    image = models.ImageField(verbose_name='Фото', upload_to=review_photo_path, blank=True)
     create_date = models.DateTimeField(auto_now_add=True,
                                        verbose_name='Дата создания')
     active = models.BooleanField(default=1, verbose_name='Активные/Не активный')
@@ -110,7 +110,7 @@ class News(models.Model):
 
     title = models.CharField(max_length=255, verbose_name='Заголовок')
     slug = models.SlugField(verbose_name='Слаг поста')
-    image = models.ImageField(verbose_name='Фото', upload_to=news_photo_path)
+    image = models.ImageField(verbose_name='Фото', upload_to=news_photo_path, blank=True)
     text = models.TextField(verbose_name='Текст новости')
     status = models.CharField(verbose_name='Статус', max_length=3,
                               choices=Status.choices, default=Status.NOT_PUBLISHED)
