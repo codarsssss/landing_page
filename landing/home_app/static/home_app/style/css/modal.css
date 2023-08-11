@@ -1,4 +1,5 @@
 .modal_block {
+    overflow-x: hidden;
     font-family: "namu-1990";
     position: fixed;
     top: 0;
