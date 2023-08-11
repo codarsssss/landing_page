@@ -241,7 +241,11 @@
                 {% for card in Reviews %}
                 <div class="swiper-slide reviews_media_item">
                     <div class="review-header">
-                        <div style="background-image: url('{{ card.image.url }}')" class="review-img"></div>
+                        {% if card.image %}
+                            <div style="background-image: url('{{ card.image.url }}')" class="review-img"></div>
+                        {% else %}
+                            <div style="background-image: url({%  static 'home_app/img/default_user.jpg' %})" class="review-img"></div>
+                        {% endif %}
                         <p>{{ card.name }}</p>
                         <p>{{ card.create_date }}</p>
                     </div>
@@ -314,18 +318,20 @@
         <div class="news_media swiper mySwiper_1">
             <div class="swiper-wrapper">
                 {% if News %}
-                  {% for new in News %}
-                <div class="swiper-slide news_media_item">
-                    <div class="content">
-                        <div class="news-header">
-                            <h3>{{new.title}}</h3>
-                            <p class="mute-text">{{ new.create_datetime }}</p>
-                        </div>
-                        <p>{{new.text|truncatewords:40}}</p>
-                    </div>
-                </div>
-                {% endfor %}
-              {% endif %}
+                    {% for new in News %}
+                        <a class="swiper-slide news-index" href="/news_{{ new.slug }}">
+                            <div class="news_media_item">
+                                <div class="content">
+                                    <div class="news-header">
+                                        <h3>{{ new.title }}</h3>
+                                        <p class="mute-text">{{ new.create_datetime }}</p>
+                                    </div>
+                                    <p>{{ new.text|truncatewords:25 }}</p>
+                                </div>
+                            </div>
+                        </a>
+                    {% endfor %}
+                {% endif %}
             </div>
         </div>
     </div>
