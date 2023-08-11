@@ -1,8 +1,13 @@
 body,
-button {
+button,
+html {
   font-family: "Manrope", sans-serif;
+  overflow-x: hidden;
 }
 
+body {
+  overflow-x: hidden;
+}
 
 @font-face {
   font-family: "namu-1990";
@@ -994,19 +999,105 @@ section p {
   transform: translate(0px, -120%);
 }
 
-.anim_block {
+.anim_list > .anim_block:nth-child(1) {
   opacity: 0;
   transform: translate(-120%, 0px);
 }
 
-.anim_block:nth-child(2) {
+.anim_list > .anim_block:nth-child(2) {
+  opacity: 0;
+  transform: translate(-120%, 0px);
+}
+
+.anim_list > .anim_block:nth-child(3) {
+  opacity: 0;
+  transform: translate(-120%, 0px);
+}
+
+.anim_list > .anim_block:nth-child(1)._active {
+  opacity: 1;
+  transform: translate(0px, 0px);
+  transition: all 1s ease;
+}
+
+.anim_list > .anim_block:nth-child(2)._active {
+  opacity: 1;
+  transform: translate(0px, 0px);
+  transition: all 1.2s ease;
+}
+
+.anim_list > .anim_block:nth-child(3)._active {
+  opacity: 1;
+  transform: translate(0px, 0px);
+  transition: all 1.4s ease;
+}
+
+.services__items > .anim_block:nth-child(1) {
+  opacity: 0;
+  transform: translate(-120%, 0);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.services__items > .anim_block:nth-child(3) {
+  opacity: 0;
+  transform: translate(-120%, 0);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.services__items > .anim_block:nth-child(2) {
+  opacity: 0;
+  transform: translate(120%, 0);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.services__items > .anim_block:nth-child(4) {
+  opacity: 0;
+  transform: translate(120%, 0);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.services__items > .anim_block:nth-child(1)._active  {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.services__items > .anim_block:nth-child(3)._active  {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.services__items > .anim_block:nth-child(2)._active  {
+  opacity: 1;
+  transform: translate(0, 0); /* Начальное положение после активации */
+  
+}
+
+.services__items > .anim_block:nth-child(4)._active  {
+  opacity: 1;
+  transform: translate(0, 0); /* Начальное положение после активации */
+  
+}
+
+.audit__items > .anim_block:nth-child(1) {
+  opacity: 0;
+  transform: translate(-120%, 0px);
+}
+
+.audit__items > .anim_block:nth-child(2) {
   opacity: 0;
   transform: translate(120%, 0px);
 }
 
-.anim_block:nth-child(4) {
-  opacity: 0;
-  transform: translate(120%, 0px);
+.audit__items > .anim_block:nth-child(1)._active {
+  opacity: 1;
+  transform: translate(0px, 0px);
+  transition: all 1s ease;
+}
+
+.audit__items > .anim_block:nth-child(2)._active {
+  opacity: 1;
+  transform: translate(0px, 0px);
+  transition: all 1s ease;
 }
 
 .animYBlocks._active {

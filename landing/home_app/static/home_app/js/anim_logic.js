@@ -1,7 +1,7 @@
 
 
+// Для горизонтальной анимации
 const animBlocks = document.querySelectorAll('.anim_block');
-console.log('Hello there')
 
 
 // Проверка на наличие элементов, которые нужно анимировать
@@ -9,15 +9,15 @@ if (animBlocks.length > 0) {
 
     // Событие, при котором будет вызываться функция
     window.addEventListener('scroll', animOnScrollX);
-    window.addEventListener('resize', animOnScrollX);
 
     function animOnScrollX(params) {
 
         for (let i = 0; i < animBlocks.length; i++) {
             const animBlock = animBlocks[i];
             const animBlockHeight = animBlock.offsetHeight;
+
             const animBlockOffset = offset(animBlock).top;
-            const animStart = 4;
+            const animStart = 100;
 
             let animItemPoint = window.innerHeight - animBlockHeight / animStart;
 
@@ -26,7 +26,7 @@ if (animBlocks.length > 0) {
                 animItemPoint = window.innerHeight - window.innerHeight / animStart;
             }
 
-            if ((pageYOffset > animBlockOffset - animItemPoint) && pageYOffset < (animItemPoint + animBlockHeight)) {
+            if ((pageYOffset + window.innerHeight > animBlockOffset) && pageYOffset < (animBlockOffset + animBlockHeight)) {
                 animBlock.classList.add('_active');
             }
         }
@@ -35,8 +35,8 @@ if (animBlocks.length > 0) {
     // Функция, которая позволяет определить положение объекта относительно окна браузера
     function offset(element) {
         const rect = element.getBoundingClientRect(),
-            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            scrollLeft = window.scrollX || document.documentElement.scrollLeft,
+            scrollTop = window.scrollY || document.documentElement.scrollTop;
         return {top: rect.top + scrollTop, left: rect.left + scrollLeft}
     }
 
@@ -44,9 +44,8 @@ if (animBlocks.length > 0) {
 
 }
 
-
+// Для вертикальной анимаций
 const animYBlocks = document.querySelectorAll('.animYBlocks');
-console.log('Hello there')
 
 
 // Проверка на наличие элементов, которые нужно анимировать
