@@ -1,22 +1,26 @@
 from django.contrib import admin
 from .models import News, Consultation, Review, Service
 from django.contrib.auth.models import User, Group
+from .forms import NewsForm
 
 
 # Новости в админ панеле
-@admin.register(News)
-class AdminNews(admin.ModelAdmin):
-    list_display = ['title', 'slug', 'image', 'text', 
-                    'create_datetime', 'status']
-    
-    # Этот атрибут нужен для того, чтобы поле slug создавалось
-    # автоматически. Работает только в админке!!!
-    prepopulated_fields = {'slug': ('title',)}
-    list_filter = ['status', 'create_datetime']
-    search_fields = ['title', 'slug', 'text']
-    ordering = ['status', '-create_datetime']
-    readonly_fields = ['create_datetime']
+# @admin.register(News)
+# class AdminNews(admin.ModelAdmin):
+#     list_display = ['title', 'slug', 'image', 'create_datetime', 'status']
+#
+#
+#     # Этот атрибут нужен для того, чтобы поле slug создавалось
+#     # автоматически. Работает только в админке!!!
+#     prepopulated_fields = {'slug': ('title',)}
+#     list_filter = ['status', 'create_datetime']
+#     search_fields = ['title', 'slug', 'text']
+#     ordering = ['status', '-create_datetime']
+#     readonly_fields = ['create_datetime']
 
+
+class NewsAdmin(admin.ModelAdmin):
+    form = NewsForm
 
 # Отзывы в админ панеле
 @admin.register(Review)
@@ -52,3 +56,4 @@ class AdminConsultation(admin.ModelAdmin):
 
 admin.site.unregister(User)
 admin.site.unregister(Group)
+admin.site.register(News, NewsAdmin)

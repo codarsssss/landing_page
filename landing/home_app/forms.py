@@ -1,5 +1,6 @@
 from .models import Service, Review, Consultation, News
 from django import forms
+from tinymce.widgets import TinyMCE
 
 
 # Форма для добавления отзыва
@@ -25,7 +26,10 @@ class ConsultationForm(forms.ModelForm):
 
 # Форма для добавления новости
 class NewsForm(forms.ModelForm):
+    text = forms.CharField(widget=TinyMCE(attrs={'cols': 80, 'rows': 10}))
     class Meta:
         model = News
-        fields = ['title', 'text', 'image']
+        fields = '__all__'
+
+
 

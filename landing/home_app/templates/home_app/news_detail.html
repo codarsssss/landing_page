@@ -2,5 +2,15 @@
 {% load static %}
 
 {% block content %}
-<h>{{ news_obj.title }}</h>
+    <div style="background: url({% static 'home_app/img/first_screen.png'%}); height: 200px; width: 100%; background-size: cover"></div>
+    <div class="container" style="min-height: 341px">
+        <div class="body-header">
+            <h1>{{ news_obj.title }}</h1>
+            <div class="photo-grid">
+            </div>
+            <div class="bode-text">
+                {{ news_obj.text|safe }}
+            </div>
+        </div>
+    </div>
 {% endblock %}
