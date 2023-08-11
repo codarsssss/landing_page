@@ -318,18 +318,20 @@
         <div class="news_media swiper mySwiper_1">
             <div class="swiper-wrapper">
                 {% if News %}
-                  {% for new in News %}
-                <div class="swiper-slide news_media_item">
-                    <div class="content">
-                        <div class="news-header">
-                            <h3>{{new.title}}</h3>
-                            <p class="mute-text">{{ new.create_datetime }}</p>
-                        </div>
-                        <p>{{new.text|truncatewords:40}}</p>
-                    </div>
-                </div>
-                {% endfor %}
-              {% endif %}
+                    {% for new in News %}
+                        <a class="swiper-slide news-index" href="/news_{{ new.slug }}">
+                            <div class="news_media_item">
+                                <div class="content">
+                                    <div class="news-header">
+                                        <h3>{{ new.title }}</h3>
+                                        <p class="mute-text">{{ new.create_datetime }}</p>
+                                    </div>
+                                    <p>{{ new.text|truncatewords:25 }}</p>
+                                </div>
+                            </div>
+                        </a>
+                    {% endfor %}
+                {% endif %}
             </div>
         </div>
     </div>
