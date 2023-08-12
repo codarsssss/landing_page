@@ -17,7 +17,9 @@
                 <li class="anim_block">Защита от субсидиарной ответственности</li>
                 <li class="anim_block">Оптимизация долговых обязательств компании</li>
             </ul>
-            <button class="modal_call">Получить консультацию</button>
+            <div class='desc_button'>
+                <button class="modal_call anim_block">Получить консультацию</button>
+            </div>
         </div>
         <div class="hero__achievements">
             <div class="achievement anim_block">
@@ -150,23 +152,23 @@
                     Эксперт по защите личных активов и субсидиарной ответственности
           первых лиц. Сопровождение любых споров в деле о банкротстве
                 </p>
-                <ul>
-                    <li>Приняла участие более чем в 1000 судебных процессах.</li>
-                    <li>
+                <ul class='anim_list'>
+                    <li class='anim_block'>Приняла участие более чем в 1000 судебных процессах.</li>
+                    <li class='anim_block'>
                         Востребованный эксперт, регулярные выступления на крупных
             профессиональных форумах и конференциях.
                     </li>
-                    <li>
+                    <li class='anim_block'>
                         Эксперт по оказанию юридической помощи при Уполномоченном по
             защите прав предпринимателей в городе Москве (pro bono)
                     </li>
-                    <li>Выпускник университет имени Г.В. Плеханова</li>
+                    <li class='anim_block'>Выпускник университет имени Г.В. Плеханова</li>
                 </ul>
             </div>
         </div>
         <!-- Преимущества -->
         <div class="profile__features">
-            <article class="profile__feature">
+            <article class="profile__feature anim_block">
                 <img src="{% static 'home_app/img/characteristics1.png' %}" alt="heart icon">
                 <p>
                     <strong>90% клиентов</strong>
@@ -174,7 +176,7 @@
                     приходят по рекомендациям
                 </p>
             </article>
-            <article class="profile__feature">
+            <article class="profile__feature anim_block">
                 <img src="{% static 'home_app/img/characteristics2.png' %}" alt="shield icon">
                 <p>
                     <strong>Персональная</strong>
@@ -183,7 +185,7 @@
           клиента
                 </p>
             </article>
-            <article class="profile__feature">
+            <article class="profile__feature anim_block">
                 <img src="{% static 'home_app/img/characteristics3.png' %}" alt="output icon">
                 <p>
                     <strong>Полная отдача</strong>
@@ -191,7 +193,7 @@
                     процессу разрешения спора
                 </p>
             </article>
-            <article class="profile__feature">
+            <article class="profile__feature anim_block">
                 <img src="{% static 'home_app/img/characteristics4.png' %}" alt="sercurity icon">
                 <p>
                     Высокий уровень
@@ -239,7 +241,7 @@
         <div class="reviews_block swiper mySwiper">
             <div class="swiper-wrapper">
                 {% for card in Reviews %}
-                <div class="swiper-slide reviews_media_item">
+                <div class="swiper-slide reviews_media_item anim_block">
                     <div class="review-header">
                         {% if card.image %}
                             <div style="background-image: url('{{ card.image.url }}')" class="review-img"></div>
@@ -270,7 +272,7 @@
                 ответственности и обезопасить активы
         </p>
         <div class="work-process__steps">
-            <article class="work-process__step">
+            <article class="work-process__step anim_block">
                 <p class="step-number">1</p>
                 <h3>Бесплатная консультация</h3>
                 <p>
@@ -278,7 +280,7 @@
                          перспектив вашего дела и предложим стратегию защиты.
                 </p>
             </article>
-            <article class="work-process__step">
+            <article class="work-process__step anim_block">
                 <p class="step-number">2</p>
                 <h3>
                     Ознакомление
@@ -290,7 +292,7 @@
                         приступим к детальному изучениювашего дела.
                 </p>
             </article>
-            <article class="work-process__step">
+            <article class="work-process__step anim_block">
                 <p class="step-number">3</p>
                 <h3>Разработка стратегии</h3>
                 <p>
@@ -298,7 +300,7 @@
                         Согласовываем план действий с клиентом
                 </p>
             </article>
-            <article class="work-process__step">
+            <article class="work-process__step anim_block">
                 <p class="step-number">4</p>
                 <h3>Защита ваших интересов в суде</h3>
                 <p>
@@ -319,7 +321,7 @@
             <div class="swiper-wrapper">
                 {% if News %}
                     {% for new in News %}
-                        <a class="swiper-slide news-index" href="/news_{{ new.slug }}">
+                        <a class="swiper-slide news-index anim_block" href="/news_{{ new.slug }}">
                             <div class="news_media_item">
                                 <div class="content">
                                     <div class="news-header">
