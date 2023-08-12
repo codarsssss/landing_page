@@ -2,13 +2,19 @@ const btn = document.querySelectorAll('.modal_call');
 const modal_block = document.querySelector('.modal_block');
 const modal_wrapper = document.querySelector('.modal');
 const modal_close_btn = document.querySelector('.close_btn');
-const body = document.querySelector('.body');
+const body = document.querySelector('html');
 
 
 let toggleModal = function toggleModal() {
+
     modal_block.classList.toggle('active');
     modal_wrapper.classList.toggle('anim');
-    body.classList.toggle('block');
+    if (body.style.overflowY === 'hidden') {
+        body.style.overflowY = 'visible';
+    } else {
+        body.style.overflowY = 'hidden';
+    }
+    
 };
 
 for (let i = 0; i < btn.length; ++i){
