@@ -284,8 +284,9 @@ section p {
   position: absolute;
   bottom: 0;
   z-index: 1;
-  right: calc(100px);
-  /* right: calc(32vw - 200px); */
+  /*right: calc(100px);*/
+  right: calc(32vw - 285px);
+  /*margin-right: 50px;*/
 }
 
 /* Блок с основными услугами */
