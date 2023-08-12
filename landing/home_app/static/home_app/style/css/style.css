@@ -11,6 +11,10 @@ body {
   padding: 0;
 }
 
+.body.block {
+  overflow-y: hidden;
+}
+
 @font-face {
   font-family: "namu-1990";
   src: url("../../fonts/namu-1990/namu-1990.ttf") format("truetype");
@@ -445,7 +449,7 @@ section p {
 }
 
 .audit__item {
-  max-width: 552px;
+
   border-radius: 10px;
   padding: 4px;
   padding-top: 4px;
@@ -469,28 +473,64 @@ section p {
 
 .audit__item h3 {
   font-size: 32px;
-  margin: 0px;
-  margin-top: 6px;
-  white-space: nowrap;
+
+  /*margin: 0px;*/
+  /*margin-top: 6px;*/
+  /*white-space: nowrap;*/
+}
+
+.audit__item img {
+  height: 40px;
 }
 
 .audit__item-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   border-radius: 6px;
   background: white;
-  padding: 56px 200px 71px 56px;
+  padding: 60px 200px 80px 180px;
+}
+
+.audit__item-header {
+  display: flex;
+  justify-content: start;
+  align-items: center;
 }
 
 .audit__item:nth-child(1) .audit__item-wrapper {
   background-image: url("../../img/audit_bac1.png");
-  background-position: right;
+  background-position: right bottom;
   background-repeat: no-repeat;
 }
 
-.audit__item:nth-child(2) .audit__item-wrapper {
-  background-image: url("../../img/audit_bac2.png");
-  background-position: right;
-  background-repeat: no-repeat;
+.audit__item-footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 40px;
 }
+
+.audit__item-list {
+  padding: 0;
+}
+
+.audit__item-list li {
+  font-size: 18px;
+  letter-spacing: -0.1px;
+  background-image: url(../../img/checkbox.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-position-y: center;
+  padding-left: 52px;
+  line-height: 32px;
+  list-style: none;
+  margin: 20px 0 20px 0;
+}
+
 
 .audit__item button {
   color: white;
@@ -505,7 +545,6 @@ section p {
   font-size: 20px;
   font-weight: 500;
   padding: 18px 87px 17px 85px;
-  margin-right: 38px;
 }
 
 .audit__item button:hover {
@@ -546,7 +585,7 @@ section p {
   padding-right: 25px;
   justify-content: center;
   gap: 75px;
-  margin-bottom: 107px;
+  margin-bottom: 20px;
 }
 
 .profile__biography img {
@@ -594,6 +633,22 @@ section p {
   padding-left: 52px;
   line-height: 32px;
 }
+
+.bio_footer {
+  display: flex;
+  justify-content: center;
+  /*text-align: center;*/
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.bio_footer p {
+  line-height: 32px;
+  padding-inline: 60px;
+}
+
+
+
 
 .profile__features {
   display: flex;

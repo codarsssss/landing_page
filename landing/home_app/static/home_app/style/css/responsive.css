@@ -385,6 +385,11 @@ g
     margin-right: 30px !important;
     width: calc(100% - 20px) !important;
   }
+
+  .bio_footer p {
+    text-align: center;
+    padding-inline: 10px;
+  }
 }
 
 
