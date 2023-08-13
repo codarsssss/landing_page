@@ -22,7 +22,7 @@
         <div class="hero__achievements">
             <div class="profile__feature anim_block">
                 <p class="achievement__heading">
-                    <strong>более 15</strong>
+                    <strong>Более 15</strong>
                     лет
                 </p>
                 <p class="achievement__text">
@@ -32,7 +32,7 @@
             </div>
             <div class="profile__feature anim_block">
                 <p class="achievement__heading">
-                    <strong>более 10</strong>
+                    <strong>Более 10</strong>
                     млрд
                 </p>
                 <p class="achievement__text">
@@ -107,7 +107,7 @@
             Получите анализ рисков привлечения к субсидиарной ответственности
         </h2>
         <div class="audit__items">
-            <article class="audit__item anim_block">
+            <article class="audit__item anim_block ">
                 <div class="audit__item-wrapper">
                     <div class="audit__item-header">
 {#                        <img src="{% static 'home_app/img/audit_icon.png' %}" alt="audit icon">#}
@@ -154,7 +154,6 @@
                         Эксперт по оказанию юридической помощи при Уполномоченном по
             защите прав предпринимателей в городе Москве (pro bono)
                     </li>
-                    <li class='anim_block'>Выпускник университет имени Г.В. Плеханова</li>
                 </ul>
             </div>
 
@@ -251,10 +250,11 @@
                             <div style="background-image: url({%  static 'home_app/img/default_user.jpg' %})" class="review-img"></div>
                         {% endif %}
                         <p>{{ card.name }}</p>
-                        <p>{{ card.create_date }}</p>
+
                     </div>
                     <div class="card-body-container">
                         <p class="card-body-text">{{ card.body }}</p>
+                        <p>{{ card.create_date }}</p>
                         <a href="#" class="read-more-btn">читать полностью</a>
                     </div>
                 </div>
