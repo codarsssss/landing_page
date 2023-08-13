@@ -174,6 +174,11 @@ section p {
   justify-content: space-between;
   padding-top: 193px;
   padding-bottom: 73px;
+  align-items: center;
+}
+
+div.hero__description > h1 {
+  font-family: 'Yeseva One', cursive;
 }
 
 .job-title {
@@ -204,6 +209,11 @@ section p {
   margin-left: 3px;
   width: 740px;
   font-family: "namu-1990";
+}
+
+.hero__subtitle{
+  text-align: left;
+  font-size: 28px;
 }
 
 .hero__description ul {
@@ -242,7 +252,6 @@ section p {
   font-family: "namu-1990";
 }
 .hero__achievements {
-  margin-top: -16px;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -284,9 +293,7 @@ section p {
   position: absolute;
   bottom: 0;
   z-index: 1;
-  /*right: calc(100px);*/
-  right: calc(32vw - 285px);
-  /*margin-right: 50px;*/
+  right: 280px;
 }
 
 /* Блок с основными услугами */
@@ -419,8 +426,8 @@ section p {
 }
 
 .audit {
-  padding-top: 126px;
-  padding-bottom: 166px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .audit .section-subtitle {
@@ -1145,21 +1152,10 @@ section p {
 
 .audit__items > .anim_block:nth-child(1) {
   opacity: 0;
-  transform: translate(-120%, 0px);
-}
-
-.audit__items > .anim_block:nth-child(2) {
-  opacity: 0;
-  transform: translate(120%, 0px);
+  transform: translate(0, 20%);
 }
 
 .audit__items > .anim_block:nth-child(1)._active {
-  opacity: 1;
-  transform: translate(0px, 0px);
-  transition: all 1s ease;
-}
-
-.audit__items > .anim_block:nth-child(2)._active {
   opacity: 1;
   transform: translate(0px, 0px);
   transition: all 1s ease;
