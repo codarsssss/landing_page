@@ -13,7 +13,8 @@
     background-color: #f0f1f4;
     overflow: visible;
     margin-top: 50px;
-    border-radius: 10%;
+    border-radius: 10px;
+    width: 200px;
 
     /*padding-bottom: 20px;*/
 }
@@ -26,6 +27,10 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+/*.card-body-container {*/
+/*    width: 70%;*/
+/*}*/
 
 .review-header {
     /*margin-top: 50px;*/
@@ -58,14 +63,14 @@
 
 .card-body-text {
     font-size: 16px;
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
-    -webkit-box-orient: vertical;
+    /*display: -webkit-box;*/
+    /*-webkit-line-clamp: 10;*/
+    /*-webkit-box-orient: vertical;*/
     overflow: hidden;
     word-wrap: break-word;
-    margin-top: 0px;
-    padding-left: 3vw;
-    padding-right: 3vw;
+    margin-top: 0;
+    /*padding-left: 3vw;*/
+    /*padding-right: 3vw;*/
 }
 
 @media only screen and (max-width: 720px) {
