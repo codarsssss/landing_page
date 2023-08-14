@@ -21,6 +21,17 @@ from .forms import NewsForm
 
 class NewsAdmin(admin.ModelAdmin):
     form = NewsForm
+    list_display = ['title', 'slug', 'image', 'create_datetime', 'status']
+
+
+    # Этот атрибут нужен для того, чтобы поле slug создавалось
+    # автоматически. Работает только в админке!!!
+    prepopulated_fields = {'slug': ('title',)}
+    list_filter = ['status', 'create_datetime']
+    search_fields = ['title', 'slug', 'text']
+    ordering = ['status', '-create_datetime']
+    readonly_fields = ['create_datetime']
+
 
 # Отзывы в админ панеле
 @admin.register(Review)

@@ -2,163 +2,165 @@
 {% load static %}
 
 {% block header %}
-<!-- Самый первый блок с краткой информацией о Татьяне  -->
-<section class="hero">
-    <div class="container">
-        <div class="hero__description">
-            <h2 class="hero__subtitle">Адвокат по защите личных активов <br>и субсидиарной ответственности первых лиц</h2>
-            <h1 class="animYBlocks">
-                Чебучакова Татьяна
-            </h1>
-            <ul class='anim_list'>
-                <li class="anim_block">Сопровождение процедур банкротства</li>
-                <li class="anim_block">Защита от субсидиарной ответственности</li>
-                <li class="anim_block">Защита при оспаривании сделок</li>
-            </ul>
-            <div class='desc_button'>
-                <button class="modal_call anim_block">Получить консультацию</button>
+    <!-- Самый первый блок с краткой информацией о Татьяне  -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero__description">
+                <h2 class="hero__subtitle">Адвокат по защите личных активов <br>и субсидиарной ответственности первых
+                    лиц</h2>
+                <h1 class="animYBlocks">
+                    Чебучакова Татьяна
+                </h1>
+                <ul class='anim_list'>
+                    <li class="anim_block">Сопровождение процедур банкротства</li>
+                    <li class="anim_block">Защита от субсидиарной ответственности</li>
+                    <li class="anim_block">Защита при оспаривании сделок</li>
+                </ul>
+                <div class='desc_button'>
+                    <button class="modal_call anim_block">Получить консультацию</button>
+                </div>
             </div>
+            <div class="hero__achievements">
+                <div class="profile__feature anim_block">
+                    <p class="achievement__heading">
+                        <strong>Более 15</strong>
+                        лет
+                    </p>
+                    <p class="achievement__text">
+                        помогаю владельцам бизнеса обезопасить себя от субсидиарной
+                        ответственности, и сохранить своё имущество
+                    </p>
+                </div>
+                <div class="profile__feature anim_block">
+                    <p class="achievement__heading">
+                        <strong>Более 10</strong>
+                        млрд
+                    </p>
+                    <p class="achievement__text">
+                        сумма выгоды клиентов в виде отказа от привлечения к
+                        субси-диарной ответствен-ности, либо убережен-ного имущества
+                    </p>
+                </div>
+            </div>
+            <img src="{% static 'home_app/img/person.png' %}" class="hero__portrait">
         </div>
-        <div class="hero__achievements">
-            <div class="profile__feature anim_block">
-                <p class="achievement__heading">
-                    <strong>Более 15</strong>
-                    лет
-                </p>
-                <p class="achievement__text">
-                    помогаю владельцам бизнеса обезопасить себя от субсидиарной
-                    ответственности, и сохранить своё имущество
-                </p>
-            </div>
-            <div class="profile__feature anim_block">
-                <p class="achievement__heading">
-                    <strong>Более 10</strong>
-                    млрд
-                </p>
-                <p class="achievement__text">
-                    сумма выгоды клиентов в виде отказа от привлечения к
-                    субси-диарной ответствен-ности, либо убережен-ного имущества
-                </p>
-            </div>
-        </div>
-        <img src="{% static 'home_app/img/person.png' %}" class="hero__portrait">
-    </div>
-</section>
+    </section>
 {% endblock %}
 
 {% block content %}
-<!-- Блок с основными услугами -->
-<div class="section-triangle services-triangle"></div>
-<section class="services" id="services" style='overflow-x: hidden;'>
-    <div class="container">
-        <p class="section-subtitle">услуги</p>
-        <h2>Комплекс услуг:</h2>
-        <p class="services__text">
-            позволяющий защитить добросовестных руководителей и собственников
-      бизнеса от субсидиарной ответственности по долгам банкрота.
-        </p>
-        <div class="services__items">
-            <article class="services__item anim_block">
-                <h3>Сопровождение процедур банкротства</h3>
-                <p>
-                    Подготовка подробного пошагового плана реализации проекта,
-          который приведет к достижению цели с минимальными рисками.
-                </p>
-                <button>Подробнее</button>
-                <p class="services__item-price">от 100 000 ₽</p>
-            </article>
-            <article class="services__item anim_block">
-                <h3>Защита от субсидиарной ответственности</h3>
-                <p>
-                    Помощь: должникам, кредиторам, контролирующим лицам должника,
-          директорам, при спорах с налоговым органом
-                </p>
-                <button>Подробнее</button>
-                <p class="services__item-price">от 100 000 ₽</p>
-            </article>
-            <article class="services__item anim_block">
-                <h3>Помощь во взыскании долговых обязательств</h3>
-                <p>
-                    Взыскиваем: судебные расходы, взыскание расходов, вызванных
-          проведением проверок, налоговые споры
-                </p>
-                <button>Подробнее</button>
-                <p class="services__item-price">от 100 000 ₽</p>
-            </article>
-            <article class="services__item anim_block">
-                <h3>Оптимизация долговых обязательств компании</h3>
-                <p>
-                    Взыскание дебиторской задолженности
-                    <br>
-                    Ведение дел о банкротстве при наличии долгов
-                </p>
-                <button>Подробнее</button>
-                <p class="services__item-price">от 100 000 ₽</p>
-            </article>
-        </div>
-    </div>
-</section>
-<!-- Блок с услугами аудита -->
-<div class="section-triangle audit-triangle"></div>
-<section class="audit">
-    <div class="container">
-        <p class="section-subtitle">Аудит</p>
-        <h2>
-            Получите анализ рисков привлечения к субсидиарной ответственности
-        </h2>
-        <div class="audit__items">
-            <article class="audit__item anim_block ">
-                <div class="audit__item-wrapper">
-                    <div class="audit__item-header">
-{#                        <img src="{% static 'home_app/img/audit_icon.png' %}" alt="audit icon">#}
-                        <h3>Когда бить тревогу?</h3>
-                    </div>
-                    <ul class="audit__item-list">
-                        <li><p>Ваша компания прекратила исполнять часть денежных обязательств или обязательных
-                            платежей</p></li>
-                        <li><p>Вы не способны в полном объеме удовлетворять требования кредиторов, в том числе об уплате
-                            обязательных платежей</p></li>
-                        <li><p>Размер денежных обязательств и обязанностей по уплате обязательных платежей над
-                            стоимостью имущества (активов)</p></li>
-                    </ul>
-                    <div class="audit__item-footer">
-                        <p>Если даже один из пунктов про вас<br>жмите</p>
-                        <button class="modal_call">Заказать звонок</button>
-                    </div>
-                </div>
-            </article>
-        </div>
-    </div>
-</section>
-<!-- Блок с подробной информацией о Татьяне, включая её краткую биографию, преимущества и принципы работы-->
-<section class="profile" id="about">
-    <!-- Биография -->
-    <img src="{% static 'home_app/img/crop_audit.png' %}" alt="gradient background" class="profile-triangle">
-    <div class="container">
-        <div class="profile__biography">
-            <img src="{% static 'home_app/img/profile_photo.png' %}" alt>
-            <div>
-                <p class="job-title">Адвокат, арбитражный управляющий</p>
-                <h2>Чебучакова Татьяна Юрьевна</h2>
-                <p class="profile__biography-text">
-                    Эксперт по защите личных активов и субсидиарной ответственности
-          первых лиц. Сопровождение любых споров в деле о банкротстве
-                </p>
-                <ul class='anim_list'>
-                    <li class='anim_block'>Приняла участие более чем в 1000 судебных процессах.</li>
-                    <li class='anim_block'>
-                        Востребованный эксперт, регулярные выступления на крупных
-            профессиональных форумах и конференциях.
-                    </li>
-                    <li class='anim_block'>
-                        Эксперт по оказанию юридической помощи при Уполномоченном по
-            защите прав предпринимателей в городе Москве (pro bono)
-                    </li>
-                </ul>
+    <!-- Блок с основными услугами -->
+    <div class="section-triangle services-triangle"></div>
+    <section class="services" id="services" style='overflow-x: hidden;'>
+        <div class="container">
+            <p class="section-subtitle">услуги</p>
+            <h2>Комплекс услуг:</h2>
+            <p class="services__text">
+                позволяющий защитить добросовестных руководителей и собственников
+                бизнеса от субсидиарной ответственности по долгам банкрота.
+            </p>
+            <div class="services__items">
+                <article class="services__item anim_block">
+                    <h3>Сопровождение процедур банкротства</h3>
+                    <p>
+                        Подготовка подробного пошагового плана реализации проекта,
+                        который приведет к достижению цели с минимальными рисками.
+                    </p>
+                    <button>Подробнее</button>
+                    <p class="services__item-price">от 100 000 ₽</p>
+                </article>
+                <article class="services__item anim_block">
+                    <h3>Защита от субсидиарной ответственности</h3>
+                    <p>
+                        Помощь: должникам, кредиторам, контролирующим лицам должника,
+                        директорам, при спорах с налоговым органом
+                    </p>
+                    <button>Подробнее</button>
+                    <p class="services__item-price">от 100 000 ₽</p>
+                </article>
+                <article class="services__item anim_block">
+                    <h3>Помощь во взыскании долговых обязательств</h3>
+                    <p>
+                        Взыскиваем: судебные расходы, взыскание расходов, вызванных
+                        проведением проверок, налоговые споры
+                    </p>
+                    <button>Подробнее</button>
+                    <p class="services__item-price">от 100 000 ₽</p>
+                </article>
+                <article class="services__item anim_block">
+                    <h3>Оптимизация долговых обязательств компании</h3>
+                    <p>
+                        Взыскание дебиторской задолженности
+                        <br>
+                        Ведение дел о банкротстве при наличии долгов
+                    </p>
+                    <button>Подробнее</button>
+                    <p class="services__item-price">от 100 000 ₽</p>
+                </article>
             </div>
-
         </div>
-        <div class="bio_footer">
+    </section>
+    <!-- Блок с услугами аудита -->
+    <div class="section-triangle audit-triangle"></div>
+    <section class="audit">
+        <div class="container">
+            <p class="section-subtitle">Аудит</p>
+            <h2>
+                Получите анализ рисков привлечения к субсидиарной ответственности
+            </h2>
+            <div class="audit__items">
+                <article class="audit__item anim_block ">
+                    <div class="audit__item-wrapper">
+                        <div class="audit__item-header">
+                            {#                        <img src="{% static 'home_app/img/audit_icon.png' %}" alt="audit icon">#}
+                            <h3>Когда бить тревогу?</h3>
+                        </div>
+                        <ul class="audit__item-list">
+                            <li><p>Ваша компания прекратила исполнять часть денежных обязательств или обязательных
+                                платежей</p></li>
+                            <li><p>Вы не способны в полном объеме удовлетворять требования кредиторов, в том числе об
+                                уплате
+                                обязательных платежей</p></li>
+                            <li><p>Размер денежных обязательств и обязанностей по уплате обязательных платежей над
+                                стоимостью имущества (активов)</p></li>
+                        </ul>
+                        <div class="audit__item-footer">
+                            <p>Если даже один из пунктов про вас<br>жмите</p>
+                            <button class="modal_call">Заказать звонок</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <!-- Блок с подробной информацией о Татьяне, включая её краткую биографию, преимущества и принципы работы-->
+    <section class="profile" id="about">
+        <!-- Биография -->
+        <img src="{% static 'home_app/img/crop_audit.png' %}" alt="gradient background" class="profile-triangle">
+        <div class="container">
+            <div class="profile__biography">
+                <img src="{% static 'home_app/img/profile_photo.png' %}" alt>
+                <div>
+                    <p class="job-title">Адвокат, арбитражный управляющий</p>
+                    <h2>Чебучакова Татьяна Юрьевна</h2>
+                    <p class="profile__biography-text">
+                        Эксперт по защите личных активов и субсидиарной ответственности
+                        первых лиц. Сопровождение любых споров в деле о банкротстве
+                    </p>
+                    <ul class='anim_list'>
+                        <li class='anim_block'>Приняла участие более чем в 1000 судебных процессах.</li>
+                        <li class='anim_block'>
+                            Востребованный эксперт, регулярные выступления на крупных
+                            профессиональных форумах и конференциях.
+                        </li>
+                        <li class='anim_block'>
+                            Эксперт по оказанию юридической помощи при Уполномоченном по
+                            защите прав предпринимателей в городе Москве (pro bono)
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="bio_footer">
                 <p>
                     За годы практики приняла участие более чем в 1000 судебных процессах. Являюсь востребованным
                     экспертом, выступаю на крупных профессиональных форумах и конференциях.
@@ -167,177 +169,176 @@
                     Москве.
                 </p>
             </div>
-        <!-- Преимущества -->
-        <div class="profile__features">
-            <article class="profile__feature anim_block">
-                <img src="{% static 'home_app/img/characteristics1.png' %}" alt="heart icon">
-                <p>
-                    <strong>90% клиентов</strong>
-                    <br>
-                    приходят по рекомендациям
-                </p>
-            </article>
-            <article class="profile__feature anim_block">
-                <img src="{% static 'home_app/img/characteristics2.png' %}" alt="shield icon">
-                <p>
-                    <strong>Персональная</strong>
-                    <br>
-                    стратегия защиты для каждого
-          клиента
-                </p>
-            </article>
-            <article class="profile__feature anim_block">
-                <img src="{% static 'home_app/img/characteristics3.png' %}" alt="output icon">
-                <p>
-                    <strong>Полная отдача</strong>
-                    <br>
-                    процессу разрешения спора
-                </p>
-            </article>
-            <article class="profile__feature anim_block">
-                <img src="{% static 'home_app/img/characteristics4.png' %}" alt="sercurity icon">
-                <p>
-                    Высокий уровень
-                    <strong>
+            <!-- Преимущества -->
+            <div class="profile__features">
+                <article class="profile__feature anim_block">
+                    <img src="{% static 'home_app/img/characteristics1.png' %}" alt="heart icon">
+                    <p>
+                        <strong>90% клиентов</strong>
                         <br>
-                        конфиденци-альности
-                    </strong>
-                </p>
-            </article>
-        </div>
-        <!-- Принципы работы -->
-        <div class="profile__work-principles">
-            <div>
-                <h3>Принципы работы:</h3>
-                <ul>
-                    <li>Всегда выполняю принятые на себя обязательства</li>
-                    <li>
-                        Обеспечиваю высокий уровень конфиденциальности для клиента,
-            что исключает возможность утечки информации
-                    </li>
-                    <li>Доверие моих клиентов всегда стоит на первом месте</li>
-                    <li>Заинтересованность в долгосрочном сотрудничестве</li>
-                </ul>
+                        приходят по рекомендациям
+                    </p>
+                </article>
+                <article class="profile__feature anim_block">
+                    <img src="{% static 'home_app/img/characteristics2.png' %}" alt="shield icon">
+                    <p>
+                        <strong>Персональная</strong>
+                        <br>
+                        стратегия защиты для каждого
+                        клиента
+                    </p>
+                </article>
+                <article class="profile__feature anim_block">
+                    <img src="{% static 'home_app/img/characteristics3.png' %}" alt="output icon">
+                    <p>
+                        <strong>Полная отдача</strong>
+                        <br>
+                        процессу разрешения спора
+                    </p>
+                </article>
+                <article class="profile__feature anim_block">
+                    <img src="{% static 'home_app/img/characteristics4.png' %}" alt="sercurity icon">
+                    <p>
+                        Высокий уровень
+                        <strong>
+                            <br>
+                            конфиденци-альности
+                        </strong>
+                    </p>
+                </article>
             </div>
-            <div>
-                <h3>Результат:</h3>
-                <p>
-                    Результат моей работы — это уверенность в том, что все Ваши
-          накопления и активы будут сохранены, независимо от того
-          являетесь ли Вы владельцем бизнеса, предпринимателем, или
-          частным лицом. Вы будете чувствовать себя в безопасности и
-          защищенности, Вы сможете планировать свое будущее, что
-          приумножит ресурсность в мире и будущих поколений.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Блок с отзывами -->
-<div class="section-triangle reviews-triangle"></div>
-<section class="reviews" id="reviews">
-    <div class="container">
-        <p class="section-subtitle">отзывы</p>
-        <h2>Отзывы клиентов</h2>
-        <div class="reviews_block swiper mySwiper">
-            <div class="swiper-wrapper">
-                {% for card in Reviews %}
-                <div class="swiper-slide reviews_media_item anim_block">
-                    <div class="review-header">
-                        {% if card.image %}
-                            <div style="background-image: url('{{ card.image.url }}')" class="review-img"></div>
-                        {% else %}
-                            <div style="background-image: url({%  static 'home_app/img/default_user.jpg' %})" class="review-img"></div>
-                        {% endif %}
-                        <p>{{ card.name }}</p>
-
-                    </div>
-                    <div class="card-body-container">
-                        <p class="card-body-text">{{ card.body }}</p>
-                        <p>{{ card.create_date }}</p>
-                        <a href="#" class="read-more-btn">читать полностью</a>
-                    </div>
+            <!-- Принципы работы -->
+            <div class="profile__work-principles">
+                <div>
+                    <h3>Принципы работы:</h3>
+                    <ul>
+                        <li>Всегда выполняю принятые на себя обязательства</li>
+                        <li>
+                            Обеспечиваю высокий уровень конфиденциальности для клиента,
+                            что исключает возможность утечки информации
+                        </li>
+                        <li>Доверие моих клиентов всегда стоит на первом месте</li>
+                        <li>Заинтересованность в долгосрочном сотрудничестве</li>
+                    </ul>
                 </div>
-                {% endfor %}
+                <div>
+                    <h3>Результат:</h3>
+                    <p>
+                        Результат моей работы — это уверенность в том, что все Ваши
+                        накопления и активы будут сохранены, независимо от того
+                        являетесь ли Вы владельцем бизнеса, предпринимателем, или
+                        частным лицом. Вы будете чувствовать себя в безопасности и
+                        защищенности, Вы сможете планировать свое будущее, что
+                        приумножит ресурсность в мире и будущих поколений.
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-<!-- Блок "порядок работы"-->
-<div class="section-triangle work-process-triangle"></div>
-<section class="work-process">
-    <div class="container">
-        <p class="section-subtitle">услуги</p>
-        <h2>Алгоритм работы</h2>
-        <p class="work-process__text">
-            Узнайте как за 4 шага защитить себя и своих коллег от субсидиарной
-                ответственности и обезопасить активы
-        </p>
-        <div class="work-process__steps">
-            <article class="work-process__step anim_block">
-                <p class="step-number">1</p>
-                <h3>Бесплатная консультация</h3>
-                <p>
-                    В ходе бесплатной консультации мы дадим предварительную оценку
-                         перспектив вашего дела и предложим стратегию защиты.
-                </p>
-            </article>
-            <article class="work-process__step anim_block">
-                <p class="step-number">2</p>
-                <h3>
-                    Ознакомление
-                    <br>
-                    с делом
-                </h3>
-                <p>
-                    После заключения договора и передачи вводных данных, мы
-                        приступим к детальному изучениювашего дела.
-                </p>
-            </article>
-            <article class="work-process__step anim_block">
-                <p class="step-number">3</p>
-                <h3>Разработка стратегии</h3>
-                <p>
-                    Готовим «дорожную карту» - пошаговый алгоритм действий.
-                        Согласовываем план действий с клиентом
-                </p>
-            </article>
-            <article class="work-process__step anim_block">
-                <p class="step-number">4</p>
-                <h3>Защита ваших интересов в суде</h3>
-                <p>
-                    Самый ответственный и важный этап, от которого будет зависеть
-                        исход всего дела. Сопровождаем до результата
-                </p>
-            </article>
-        </div>
-    </div>
-</section>
-<!-- Блок с новостями и публикациями -->
-<div class="section-triangle news-triangle"></div>
-<section class="news-feed">
-    <div class="container">
-        <p class="section-subtitle">медиа</p>
-        <h2>Новости и публикации</h2>
-        <div class="news_media swiper mySwiper_1">
-            <div class="swiper-wrapper">
-                {% if News %}
-                    {% for new in News %}
-                        <a class="swiper-slide news-index anim_block" href="/news_{{ new.slug }}">
-                            <div class="news_media_item">
-                                <div class="content">
-                                    <div class="news-header">
-                                        <h3>{{ new.title }}</h3>
-                                        <p class="mute-text">{{ new.create_datetime }}</p>
-                                    </div>
-                                    <p>{{ new.text|truncatewords:25|safe }}</p>
-                                </div>
+    </section>
+    <!-- Блок с отзывами -->
+    <div class="section-triangle reviews-triangle"></div>
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <p class="section-subtitle">отзывы</p>
+            <h2>Отзывы клиентов</h2>
+            <div class="reviews_block swiper mySwiper">
+                <div class="swiper-wrapper">
+                    {% for card in Reviews %}
+                        <div class="swiper-slide reviews_media_item anim_block">
+                            <div class="card-body-container">
+                                <p class="card-body-text">{{ card.body }}</p>
+{#                                <p>{{ card.create_date }}</p>#}
                             </div>
-                        </a>
+                            <div class="review-header">
+                                {% if card.image %}
+                                    <div style="background-image: url('{{ card.image.url }}')" class="review-img"></div>
+                                {% else %}
+                                    <div style="background-image: url({% static 'home_app/img/default_user.jpg' %})"
+                                         class="review-img"></div>
+                                {% endif %}
+                                <p>{{ card.name }}</p>
+                            </div>
+                        </div>
                     {% endfor %}
-                {% endif %}
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+    <!-- Блок "порядок работы"-->
+    <div class="section-triangle work-process-triangle"></div>
+    <section class="work-process">
+        <div class="container">
+            <p class="section-subtitle">услуги</p>
+            <h2>Алгоритм работы</h2>
+            <p class="work-process__text">
+                Узнайте как за 4 шага защитить себя и своих коллег от субсидиарной
+                ответственности и обезопасить активы
+            </p>
+            <div class="work-process__steps">
+                <article class="work-process__step anim_block">
+                    <p class="step-number">1</p>
+                    <h3>Бесплатная консультация</h3>
+                    <p>
+                        В ходе бесплатной консультации мы дадим предварительную оценку
+                        перспектив вашего дела и предложим стратегию защиты.
+                    </p>
+                </article>
+                <article class="work-process__step anim_block">
+                    <p class="step-number">2</p>
+                    <h3>
+                        Ознакомление
+                        <br>
+                        с делом
+                    </h3>
+                    <p>
+                        После заключения договора и передачи вводных данных, мы
+                        приступим к детальному изучениювашего дела.
+                    </p>
+                </article>
+                <article class="work-process__step anim_block">
+                    <p class="step-number">3</p>
+                    <h3>Разработка стратегии</h3>
+                    <p>
+                        Готовим «дорожную карту» - пошаговый алгоритм действий.
+                        Согласовываем план действий с клиентом
+                    </p>
+                </article>
+                <article class="work-process__step anim_block">
+                    <p class="step-number">4</p>
+                    <h3>Защита ваших интересов в суде</h3>
+                    <p>
+                        Самый ответственный и важный этап, от которого будет зависеть
+                        исход всего дела. Сопровождаем до результата
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+    <!-- Блок с новостями и публикациями -->
+    <div class="section-triangle news-triangle"></div>
+    <section class="news-feed">
+        <div class="container">
+            <p class="section-subtitle">медиа</p>
+            <h2>Новости и публикации</h2>
+            <div class="news_media swiper mySwiper_1">
+                <div class="swiper-wrapper">
+                    {% if News %}
+                        {% for new in News %}
+                            <a class="swiper-slide news-index anim_block" href="/news_{{ new.slug }}">
+                                <div class="news_media_item">
+                                    <div class="content">
+                                        <div class="news-header">
+                                            <h3>{{ new.title }}</h3>
+                                            <p class="mute-text">{{ new.create_datetime }}</p>
+                                        </div>
+                                        <p>{{ new.text|truncatewords:25|safe }}</p>
+                                    </div>
+                                </div>
+                            </a>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock %}

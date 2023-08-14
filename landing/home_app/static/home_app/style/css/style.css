@@ -77,6 +77,11 @@ section p {
   margin-right: 44px;
 }
 
+.header__logo img, .footer__logo img {
+  max-height: 100px;
+}
+
+
 .header__logo h3 {
   font-size: 20px;
   font-weight: 400;
@@ -178,7 +183,7 @@ section p {
 }
 
 div.hero__description > h1 {
-  font-family: 'Yeseva One', cursive;
+  font-family: 'Vollkorn', serif;
 }
 
 .job-title {
