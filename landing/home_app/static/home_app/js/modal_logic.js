@@ -3,8 +3,10 @@ const modal_block = document.querySelector('.modal_block');
 const modal_wrapper = document.querySelector('.modal');
 const modal_close_btn = document.querySelector('.close_btn');
 const body = document.querySelector('html');
+const service_btns = document.querySelectorAll('.modal_call_service');
+const modal_ids = document.querySelectorAll('.service_modal')
 
-
+console.log(modal_ids)
 let toggleModal = function toggleModal() {
 
     modal_block.classList.toggle('active');
@@ -37,3 +39,13 @@ modal_block.addEventListener('click', function(e) {
         toggleModal();
     }
 });
+
+
+for (let i = 0; i < service_btns.length; ++i) {
+    service_btns[i].addEventListener('click', function (e){
+        e.stopPropagation();
+        console.log(i)
+        modal_ids[i].style.opacity = '1';
+        modal_ids[i].style.position = 'fixed'
+    })
+};
