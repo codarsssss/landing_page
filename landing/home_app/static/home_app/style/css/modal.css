@@ -1,3 +1,7 @@
+.service_modal {
+    opacity: 0;
+}
+
 .modal_block {
     overflow-x: hidden;
     font-family: "namu-1990";
@@ -28,7 +32,7 @@
     background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(237,237,237,1) 76%, rgba(230,230,230,1) 100%);
     border-radius: 4px;
     transition: all .3s ease-in-out;
-    opacity: 0.5;
+    opacity: 0;
     filter: none !important;
 
     display: flex;
