@@ -355,7 +355,7 @@ div.hero__description > h1 {
 }
 
 .services__item:hover{
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px !important;
   transform: scale(1.05) !important;
   transition: all .5s ease !important;
 }
@@ -1112,25 +1112,25 @@ div.hero__description > h1 {
 .services__items > .anim_block:nth-child(1) {
   opacity: 0;
   transform: translate(-120%, 0);
-  transition: opacity 1s ease, transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease !important;
 }
 
 .services__items > .anim_block:nth-child(3) {
   opacity: 0;
   transform: translate(-120%, 0);
-  transition: opacity 1s ease, transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease !important;
 }
 
 .services__items > .anim_block:nth-child(2) {
   opacity: 0;
   transform: translate(120%, 0);
-  transition: opacity 1s ease, transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease !important;
 }
 
 .services__items > .anim_block:nth-child(4) {
   opacity: 0;
   transform: translate(120%, 0);
-  transition: opacity 1s ease, transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease !important;
 }
 
 .services__items > .anim_block:nth-child(1)._active  {
@@ -1302,4 +1302,21 @@ div.hero__description > h1 {
  opacity: 1;
  transform: translate(0px, 0px);
  transition: all 1s ease;
+}
+
+.tonner_block {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1000;
+  opacity: 0;
+}
+
+.tonner_block.active {
+  opacity: 1;
+  z-index: 1000;
 }
