@@ -1316,6 +1316,14 @@ div.hero__description > h1 {
   opacity: 0;
 }
 
+.services__item_content {
+  display: none;
+}
+
+.services__item_content.active {
+  display: flex;
+}
+
 .tonner_block.active {
   opacity: 1;
   z-index: 1000;
