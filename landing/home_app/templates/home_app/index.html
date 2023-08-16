@@ -67,7 +67,9 @@
                     </p>
 
                     <!-- Сюда вставляем контент для карточки услуг -->
-                    <div class="services__item_content"></div>
+                    <div class="services__item_content">
+                        это див services__item_content 1
+                    </div>
 
                     <button class="modal_call_service">Подробнее</button>
                     <p class="services__item-price">от 100 000 ₽</p>
@@ -80,7 +82,9 @@
                     </p>
 
                     <!-- Сюда вставляем контент для карточки услуг -->
-                    <div class="services__item_content"></div>
+                    <div class="services__item_content">
+                        это див services__item_content 2
+                    </div>
 
                     <button class="modal_call_service">Подробнее</button>
                     <p class="services__item-price">от 100 000 ₽</p>
@@ -93,7 +97,9 @@
                     </p>
 
                     <!-- Сюда вставляем контент для карточки услуг -->
-                    <div class="services__item_content"></div>
+                    <div class="services__item_content">
+                        это див services__item_content 3
+                    </div>
 
                     <button class="modal_call_service">Подробнее</button>
                     <p class="services__item-price">от 100 000 ₽</p>
@@ -107,7 +113,9 @@
                     </p>
 
                     <!-- Сюда вставляем контент для карточки услуг -->
-                    <div class="services__item_content"></div>
+                    <div class="services__item_content">
+                        Hello, World! 4
+                    </div>
 
                     <button class="modal_call_service">Подробнее</button>
                     <p class="services__item-price">от 100 000 ₽</p>
@@ -341,7 +349,7 @@
                         {% for n in achievements %}
                             <a class="swiper-slide news-index anim_block" href="/news_{{ new.slug }}">
                                 <div class="news_media_item">
-                                    <img src="{% static 'home_app/img/achievements/orig/1.jpg' %}" alt="">
+                                    <div class="news_media_item_img" style="background-image: url({% static 'home_app/img/achievements/orig/1.jpg' %});"></div>
                                 </div>
                             </a>
                         {% endfor %}

@@ -1328,3 +1328,11 @@ div.hero__description > h1 {
   opacity: 1;
   z-index: 1000;
 }
+
+.news_media_item_img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:contain;
+  height: 200px;
+  width: auto;
+}
