@@ -33,7 +33,8 @@ def index(request):
         'title': 'Главная страница',
         'Services': service,
         'Reviews': review,
-        'News': news
+        'News': news,
+        'achievements': range(8)
     }
 
     return render(request, 'home_app/index.html', context=context)

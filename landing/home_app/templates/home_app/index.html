@@ -322,21 +322,13 @@
             <h2>Новости и публикации</h2>
             <div class="news_media swiper mySwiper_1">
                 <div class="swiper-wrapper">
-                    {% if News %}
-                        {% for new in News %}
+                        {% for n in achievements %}
                             <a class="swiper-slide news-index anim_block" href="/news_{{ new.slug }}">
                                 <div class="news_media_item">
-                                    <div class="content">
-                                        <div class="news-header">
-                                            <h3>{{ new.title }}</h3>
-                                            <p class="mute-text">{{ new.create_datetime }}</p>
-                                        </div>
-                                        <p>{{ new.text|truncatewords:25|safe }}</p>
-                                    </div>
+                                    <img src="{% static 'home_app/img/achievements/prev/1.jpg' %}" alt="">
                                 </div>
                             </a>
                         {% endfor %}
-                    {% endif %}
                 </div>
             </div>
         </div>
