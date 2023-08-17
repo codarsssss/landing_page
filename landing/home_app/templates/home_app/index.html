@@ -453,12 +453,16 @@
             <div class="news_media swiper mySwiper_1">
                 <div class="swiper-wrapper">
 
-                    <a class="swiper-slide news-index anim_block" href="/news_{{ new.slug }}">
+{#                    <a class="swiper-slide news-index anim_block" href="/news_{{ new.slug }}">#}
                         <div class="news_media_item">
-                            <div class="news_media_item_img"
-                                 style="background-image: url({% static 'home_app/img/achievements/orig/0.jpg' %});"></div>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#imageModal">
+                                <img class="news_media_item_img" src="{% static 'home_app/img/achievements/orig/0.jpg' %}" alt="">
+                            </button>
+{#                            <div class="news_media_item_img"#}
+{#                                 style="background-image: url({% static 'home_app/img/achievements/orig/0.jpg' %});"></div>#}
                         </div>
-                    </a>
+{#                    </a>#}
 
                     <a class="swiper-slide news-index anim_block" href="/news_{{ new.slug }}">
                         <div class="news_media_item">
