@@ -342,6 +342,7 @@ div.hero__description > h1 {
   gap: 20px;
   column-gap: 40px;
   justify-content: center;
+  position: relative;
 }
 
 .services__item {
@@ -1322,6 +1323,7 @@ div.hero__description > h1 {
 
 .services__item_content.active {
   display: flex;
+  flex-direction: column;
 }
 
 .tonner_block.active {

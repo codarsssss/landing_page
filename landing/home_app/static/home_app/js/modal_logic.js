@@ -72,9 +72,9 @@ for (let i = 0; i < service_btns.length; i++) {
         e.stopPropagation();
         tonnerBlock.classList.add('active')
         service_items[i].style.zIndex = '1001';
-        service_items[i].style.position = 'fixed';
-        service_items[i].style.height = '50vh';
-        service_items[i].style.width = '40vw';
+        service_items[i].style.position = 'absolute';
+        // service_items[i].style.height = 'aoto';
+        // service_items[i].style.width = '40vw';
         service_items[i].style.transition = 'all 0.3s ease !important';
         service_items[i].style.top = '150px';
         service_items[i].style.transform = 'translate(50%, -50%)';
@@ -85,5 +85,3 @@ for (let i = 0; i < service_btns.length; i++) {
         body.style.overflowY = 'hidden';
         })
 }
-
-
