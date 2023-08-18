@@ -47,6 +47,9 @@ modal_block.addEventListener('click', function(e) {
 
 for (let i = 0; i < service_btns.length; i++) {
 
+    let original_back_img_service_item = service_items[i].style.backgroundImage;
+    console.log(getComputedStyle(service_items[i]).backgroundImage);
+
     let toggleServicesContent = function toggleServicesContent(i) {
         services__item_content[i].classList.toggle("active");
     }
@@ -66,12 +69,15 @@ for (let i = 0; i < service_btns.length; i++) {
         service_items[i].style.boxShadow = 'none';
         service_btns[i].style.display = 'inline';
         service_items[i].style.overflowY = 'hidden'
+        service_items[i].style.backgroundImage = original_back_img_service_item[i]
         body.style.overflowY = 'visible';
     })
 
     service_btns[i].addEventListener('click', function(e) {
         e.stopPropagation();
         tonnerBlock.classList.add('active')
+        let original_back_img_service_item = service_items[i].style.backgroundImage;
+        console.log(service_items[i].style.backgroundImage);
         service_items[i].style.zIndex = '1001';
         service_items[i].style.position = 'fixed';
         service_items[i].style.height = '80%';
@@ -83,6 +89,7 @@ for (let i = 0; i < service_btns.length; i++) {
         service_items[i].style.boxShadow = 'rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px';
         service_btns[i].style.display = 'none'
         service_items[i].style.overflowY = 'scroll'
+        service_items[i].style.backgroundImage = 'none'
         toggleServicesContent(i);
         body.style.overflowY = 'hidden';
         })
