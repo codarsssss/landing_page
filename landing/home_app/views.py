@@ -1,7 +1,6 @@
 from django.contrib import messages
-from django.shortcuts import render, redirect, get_object_or_404
-from django.http import Http404
-from .models import News, Review, Service
+from django.shortcuts import render, redirect
+from .models import Review, Service
 from .forms import ConsultationForm
 
 
@@ -25,7 +24,6 @@ def index(request):
         if handle_form(request, ConsultationForm):
             return redirect('/')
 
-    news = News.published.all() # Все новости, у которых status = Published
     review = Review.objects.filter(active=True) # Все активные отзывы
     service = Service.objects.filter(active=True) # Все активные услуги
 
@@ -33,20 +31,7 @@ def index(request):
         'title': 'Главная страница',
         'Services': service,
         'Reviews': review,
-        'News': news,
         'achievements': range(8)
     }
 
     return render(request, 'home_app/index.html', context=context)
-
-
-# Детальный взгляд на пост
-def news_detail(request, slug):
-    news_obj = get_object_or_404(News, slug=slug)
-
-    context = {
-        'title': 'Новости',
-        'news_obj': news_obj
-    }
-
-    return render(request, 'home_app/news_detail.html', context=context)

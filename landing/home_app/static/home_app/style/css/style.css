@@ -350,12 +350,17 @@ div.hero__description > h1 {
   background-repeat: no-repeat;
   background-position-y: 35px;
   background-position-x: calc(100% - 31px);
-  padding: 13px 118px 38px 50px;
+  padding: 13px 80px 38px 80px;
   border-radius: 18px;
   width: 392px;
 
   display: flex;
   flex-wrap: wrap;
+}
+
+.services__item_preview {
+  display: flex;
+  flex-direction: column;
 }
 
 .services__item:hover{
@@ -1006,7 +1011,8 @@ div.hero__description > h1 {
 .news_media_item {
   /*height: 245px;*/
   border-radius: 18px;
-  background: #f2f0ef;
+  /* background: #f2f0ef; */
+  width: 340px;
   /*display: flex;*/
   /*justify-content: space-around;*/
   height: auto;
@@ -1327,6 +1333,7 @@ div.hero__description > h1 {
 .services__item_content.active {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .tonner_block.active {

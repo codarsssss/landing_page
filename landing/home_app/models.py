@@ -1,5 +1,4 @@
 from django.db import models
-from django.db.models.query import QuerySet
 
 
 # Модель услуг
@@ -72,51 +71,3 @@ class Consultation(models.Model):
 # Указание slug позволит скрипту быстрее находить нужный файл
 def news_photo_path(instance, filename):
     return 'news_photo/slug_{}/{}'.format(instance.slug, filename)
-
-
-"""
-
-class NewsPublishedManager(models.Manager) является конкретно-прикладным 
-модельным менеджером, в конкретном случае он будет выводить из бд 
-только те посты, у которых есть статут 'Опубликован'.  
-Для извлечения обектов нужно использовать 'News.published.all()'.
-
-Если вы хотите использовать кастомный модельный менеджер и при этом
-сохранить стандартный 'News.objects.all()', то нужно его явно указать
-перед кастомным - 1) objects = models.Manager() 2) published = NewsPublishedManager().
-Также можно использовать Meta-атрибут default_manager_name.
-
-"""
-
-
-class NewsPublishedManager(models.Manager):
-    def get_queryset(self) -> QuerySet:
-        return super().get_queryset().filter(
-            status=News.Status.PUBLISHED)
-
-
-# Модель новостей
-class News(models.Model):
-    class Status(models.TextChoices):
-        NOT_PUBLISHED = 'Нет', 'Не опубликована'
-        PUBLISHED = 'Да', 'Опубликована'
-
-    title = models.CharField(max_length=255, verbose_name='Заголовок')
-    slug = models.SlugField(verbose_name='Слаг поста')
-    image = models.ImageField(verbose_name='Фото', upload_to=news_photo_path, blank=True)
-    text = models.TextField(verbose_name='Текст новости')
-    status = models.CharField(verbose_name='Статус', max_length=3,
-                              choices=Status.choices, default=Status.NOT_PUBLISHED)
-    create_datetime = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
-
-    objects = models.Manager()  # Менеджер, применяемый по умолчанию
-    published = NewsPublishedManager()  # Конкретно-прикладной менеджер
-
-    class Meta:
-        ordering = ['-create_datetime']
-
-        verbose_name = 'Новость'
-        verbose_name_plural = 'Новости'
-
-    def __str__(self):
-        return self.title
