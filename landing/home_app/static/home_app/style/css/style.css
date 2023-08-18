@@ -353,6 +353,9 @@ div.hero__description > h1 {
   padding: 13px 118px 38px 50px;
   border-radius: 18px;
   width: 392px;
+
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .services__item:hover{
@@ -1337,4 +1340,9 @@ div.hero__description > h1 {
   background-size:contain;
   height: 200px;
   width: auto;
+}
+
+.services__item_content {
+  display: none;
+  flex-wrap: wrap;
 }

@@ -113,6 +113,9 @@
     font-size: 14px;
     padding: 14px 20px 14px 20px;
   }
+  .services__item {
+    max-width: 900px;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -258,6 +261,10 @@
     right: calc(5vw + 200px);
   }
 
+  .services__item {
+    max-width: 800px;
+  }
+
 }
 
 @media only screen and (max-width: 760px) {
@@ -323,6 +330,10 @@
 
   .reviews__clients img {
     height: 100px;
+  }
+
+  .services__item {
+    max-width: 500px;
   }
 }
 
