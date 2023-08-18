@@ -47,8 +47,7 @@ modal_block.addEventListener('click', function(e) {
 
 for (let i = 0; i < service_btns.length; i++) {
 
-    let original_back_img_service_item = service_items[i].style.backgroundImage;
-    console.log(getComputedStyle(service_items[i]).backgroundImage);
+    let original_back_img_service_item = getComputedStyle(service_items[i]).backgroundImage;
 
     let toggleServicesContent = function toggleServicesContent(i) {
         services__item_content[i].classList.toggle("active");
@@ -68,8 +67,8 @@ for (let i = 0; i < service_btns.length; i++) {
         service_items[i].style.position = 'relative';
         service_items[i].style.boxShadow = 'none';
         service_btns[i].style.display = 'inline';
-        service_items[i].style.overflowY = 'hidden'
-        service_items[i].style.backgroundImage = original_back_img_service_item[i]
+        service_items[i].style.overflowY = 'hidden';
+        service_items[i].style.backgroundImage = original_back_img_service_item;
         body.style.overflowY = 'visible';
     })
 
