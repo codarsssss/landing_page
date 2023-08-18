@@ -474,49 +474,49 @@
             <div class="news_media swiper mySwiper_1">
                 <div class="swiper-wrapper">
 
-                    <a class="swiper-slide news-index anim_block" >
+                    <a class="swiper-slide news-index anim_block" href="{% static 'home_app/img/achievements/orig/1.jpg' %}" data-fancybox>
                         <div class="news_media_item">
                             <div class="news_media_item_img"
                                  style="background-image: url({% static 'home_app/img/achievements/orig/1.jpg' %});"></div>
                         </div>
                     </a>
 
-                    <a class="swiper-slide news-index anim_block" >
+                    <a class="swiper-slide news-index anim_block" href="{% static 'home_app/img/achievements/orig/2.jpg' %}" data-fancybox>
                         <div class="news_media_item">
                             <div class="news_media_item_img"
                                  style="background-image: url({% static 'home_app/img/achievements/orig/2.jpg' %});"></div>
                         </div>
                     </a>
 
-                    <a class="swiper-slide news-index anim_block" >
+                    <a class="swiper-slide news-index anim_block" href="{% static 'home_app/img/achievements/orig/3.jpg' %}" data-fancybox>
                         <div class="news_media_item">
                             <div class="news_media_item_img"
                                  style="background-image: url({% static 'home_app/img/achievements/orig/3.jpg' %});"></div>
                         </div>
                     </a>
 
-                    <a class="swiper-slide news-index anim_block" >
+                    <a class="swiper-slide news-index anim_block" href="{% static 'home_app/img/achievements/orig/4.jpg' %}" data-fancybox>
                         <div class="news_media_item">
                             <div class="news_media_item_img"
                                  style="background-image: url({% static 'home_app/img/achievements/orig/4.jpg' %});"></div>
                         </div>
                     </a>
 
-                    <a class="swiper-slide news-index anim_block">
+                    <a class="swiper-slide news-index anim_block" href="{% static 'home_app/img/achievements/orig/5.jpg' %}" data-fancybox>
                         <div class="news_media_item">
                             <div class="news_media_item_img"
                                  style="background-image: url({% static 'home_app/img/achievements/orig/5.jpg' %});"></div>
                         </div>
                     </a>
 
-                    <a class="swiper-slide news-index anim_block" >
+                    <a class="swiper-slide news-index anim_block" href="{% static 'home_app/img/achievements/orig/6.jpg' %}" data-fancybox>
                         <div class="news_media_item">
                             <div class="news_media_item_img"
                                  style="background-image: url({% static 'home_app/img/achievements/orig/6.jpg' %});"></div>
                         </div>
                     </a>
 
-                    <a class="swiper-slide news-index anim_block" >
+                    <a class="swiper-slide news-index anim_block" href="{% static 'home_app/img/achievements/orig/7.jpg' %}" data-fancybox>
                         <div class="news_media_item">
                             <div class="news_media_item_img"
                                  style="background-image: url({% static 'home_app/img/achievements/orig/7.jpg' %});"></div>
@@ -526,5 +526,10 @@
                 </div>
             </div>
         </div>
+        <script>
+            Fancybox.bind("[data-fancybox]", {
+    // Your custom options
+        });
+        </script>
     </section>
 {% endblock %}
