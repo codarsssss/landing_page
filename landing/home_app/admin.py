@@ -15,13 +15,6 @@ class AdminReview(admin.ModelAdmin):
 
 
 # Услуги в админ панеле
-@admin.register(Service)
-class AdminService(admin.ModelAdmin):
-    list_display = ['title', 'price', 'active', 'create_date']
-    list_filter = ['active', 'price', 'create_date']
-    readonly_fields = ['create_date']
-    search_fields = ['title', 'description']
-    ordering = ['active', '-create_date']
 
 
 # Заявки в админ панеле

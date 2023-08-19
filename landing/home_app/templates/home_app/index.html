@@ -401,12 +401,6 @@
                                 {#                                <p>{{ card.create_date }}</p>#}
                             </div>
                             <div class="review-header">
-                                {% if card.image %}
-                                    <div style="background-image: url('{{ card.image.url }}')" class="review-img"></div>
-                                {% else %}
-                                    <div style="background-image: url({% static 'home_app/img/default_user.jpg' %})"
-                                         class="review-img"></div>
-                                {% endif %}
                                 <p>{{ card.name }}</p>
                             </div>
                         </div>

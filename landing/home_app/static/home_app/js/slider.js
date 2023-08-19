@@ -3,7 +3,7 @@ var swiper = new Swiper(".mySwiper", {
   spaceBetween: 60,
   loop: true,
   autoplay: {
-    delay: 1000,
+    delay: 5000,
   },
   breakpoints: {
     320: {
@@ -31,7 +31,7 @@ var swiper = new Swiper(".mySwiper_1", {
   spaceBetween: 50,
   loop: true,
   autoplay: {
-    delay: 1000,
+    delay: 2000,
   },
   breakpoints: {
     320: {

@@ -9,12 +9,12 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding: 15px;
+    /*margin: 15px;*/
     background-color: #f0f1f4;
     overflow: visible;
     margin-top: 50px;
     border-radius: 10px;
-    width: 200px;
+    /*width: 200px;*/
 
     /*padding-bottom: 20px;*/
 }
@@ -47,6 +47,8 @@
     /*line-height: 20px;*/
     margin-top: 0px;
     margin-bottom: 0px;
+    padding-bottom: 30px;
+    font-weight: bold;
 }
 
 .review-header > p:nth-child(2) {
@@ -69,6 +71,8 @@
     overflow: hidden;
     word-wrap: break-word;
     margin-top: 0;
+    padding: 15px;
+    font-family: 'Merriweather', serif;
     /*padding-left: 3vw;*/
     /*padding-right: 3vw;*/
 }
@@ -80,7 +84,7 @@
     }
 
     .reviews_media_item {
-        width: 100%;
+        /*width: 100%;*/
         min-width: 280px !important;
     }
 }
