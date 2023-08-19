@@ -1,15 +1,15 @@
-from django.contrib import messages
+import asyncio
 from django.shortcuts import render, redirect
-from .models import Review, Service
+from .models import Review
 from .forms import ConsultationForm
+from .notification_bot import send_telegram_message
 
 
 def handle_form(request, form_class):
     form = form_class(request.POST)
     if form.is_valid():
-        # asyncio.run(send_telegram_message(f'{form.instance.username}-{form.instance.number}'))
+        asyncio.run(send_telegram_message(f'{form.instance.username}\n{form.instance.number}'))
         form.save()
-        # messages.success(request, "Скоро мы с Вами свяжемся для консультации")
         return True
     else:
         form = form_class()
