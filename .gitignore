@@ -163,3 +163,4 @@ cython_debug/
 /landing/media/
 /.idea/*
 /.vscode/
+/landing/landing/secret.py
