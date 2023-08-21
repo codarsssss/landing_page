@@ -128,6 +128,10 @@
 
 .modal_footer > button {
     background-image: linear-gradient(91.65deg, #ecd8cd 12.88%, #d8ae97 100.32%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
     color: transparent;
     background-clip: text;
     padding: 15px 20px;
