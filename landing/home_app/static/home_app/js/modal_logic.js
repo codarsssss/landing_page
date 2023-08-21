@@ -7,6 +7,7 @@ const body = document.querySelector('html');
 const service_btns = document.querySelectorAll('.modal_call_service');
 const service_items = document.querySelectorAll('.services__item');
 const services__item_content = document.querySelectorAll('.services__item_content');
+const services__item_preview = document.querySelectorAll('.services__item_preview');
 const services_title = document.querySelectorAll('.service_title');
 const tonnerBlock = document.querySelector('.tonner_block');
 
@@ -27,6 +28,7 @@ for (let i = 0; i < service_btns.length; i++) {
         }
         e.stopPropagation();
         tonnerBlock.classList.remove('active');
+        services__item_preview[i].style.display = 'block';
         service_items[i].style.top = '0px';
         service_items[i].style.width = '392px';
         service_items[i].style.height = 'auto';
@@ -49,6 +51,7 @@ for (let i = 0; i < service_btns.length; i++) {
     service_btns[i].addEventListener('click', function(e) {
         e.stopPropagation();
         tonnerBlock.classList.add('active')
+        services__item_preview[i].style.display = 'none'
         service_items[i].style.zIndex = '1001';
         service_items[i].style.position = 'fixed';
         service_items[i].style.height = '70%';
