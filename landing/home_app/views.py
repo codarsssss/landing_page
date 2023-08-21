@@ -1,6 +1,5 @@
 import asyncio
 from django.shortcuts import render, redirect
-from .models import Review
 from .forms import ConsultationForm
 from .notification_bot import send_telegram_message
 
@@ -23,14 +22,12 @@ def index(request):
         if handle_form(request, ConsultationForm):
             return redirect('/')
 
-    review = Review.objects.filter(active=True) # Все активные отзывы
-
     context = {
-        'title': 'Главная страница',
-        'Reviews': review,
+        'title': 'Главная страница'
     }
 
     return render(request, 'home_app/index.html', context=context)
+
 
 def policy_view(request):
     if request.method == 'POST':
