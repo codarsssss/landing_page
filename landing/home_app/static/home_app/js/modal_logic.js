@@ -22,6 +22,8 @@ for (let i = 0; i < service_btns.length; i++) {
         services__item_content[i].classList.toggle("active");
     }
 
+// Закрытие модалки с услугами
+
     tonnerBlock.addEventListener('click', function(e) {
         if (services__item_content[i].classList.contains = 'active') {
             services__item_content[i].classList.remove('active');
@@ -39,6 +41,7 @@ for (let i = 0; i < service_btns.length; i++) {
         service_btns[i].style.display = 'inline';
         service_items[i].style.overflowY = 'hidden';
         service_items[i].style.backgroundImage = original_back_img_service_item[i];
+
         body.style.overflowY = 'visible';
 
         if (window.innerWidth >= 1001) {
@@ -48,6 +51,8 @@ for (let i = 0; i < service_btns.length; i++) {
         }
     })
 
+// Открытие модалки с услугами
+
     service_btns[i].addEventListener('click', function(e) {
         e.stopPropagation();
         tonnerBlock.classList.add('active')
@@ -56,7 +61,7 @@ for (let i = 0; i < service_btns.length; i++) {
         service_items[i].style.position = 'fixed';
         service_items[i].style.height = '70%';
         service_items[i].style.width = '18%';
-        service_items[i].style.transition = 'all 0.3s ease !important';
+        service_items[i].style.transition = 'all 0.3s ease';
     
         if (window.innerWidth <= 376) {
             service_items[i].style.top = '80px';
@@ -76,6 +81,7 @@ for (let i = 0; i < service_btns.length; i++) {
         services_title[i].style.width = '100%'
         services_title[i].style.maxWidth = '100%'
         toggleServicesContent(i);
+
         body.style.overflowY = 'hidden';
         })
 }
@@ -85,6 +91,7 @@ let toggleModal = function toggleModal() {
 
     modal_block.classList.toggle('active');
     modal_wrapper.classList.toggle('anim');
+
     if (body.style.overflowY === 'hidden') {
         body.style.overflowY = 'visible';
     } else {
@@ -107,6 +114,7 @@ for (let i = 0; i < btn.length; ++i){
     e.stopPropagation();
 
     tonnerBlock.classList.remove('active');
+    services__item_preview[item].style.display = 'block';
     service_items[item].style.top = '0px';
     service_items[item].style.width = '392px';
     service_items[item].style.height = 'auto';
