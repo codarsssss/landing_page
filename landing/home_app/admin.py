@@ -1,20 +1,6 @@
 from django.contrib import admin
-from .models import Consultation, Review, Service
+from .models import Consultation
 from django.contrib.auth.models import User, Group
-
-
-# Отзывы в админ панеле
-@admin.register(Review)
-class AdminReview(admin.ModelAdmin):
-    list_display = ['name', 'body', 'create_date',
-                    'active']
-    list_filter = ['active', 'create_date']
-    search_fields = ['body', 'name']
-    ordering = ['active', '-create_date']
-    readonly_fields = ['create_date']
-
-
-# Услуги в админ панеле
 
 
 # Заявки в админ панеле

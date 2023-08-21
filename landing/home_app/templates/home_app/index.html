@@ -381,29 +381,7 @@
             </div>
         </div>
     </section>
-    <!-- Блок с отзывами -->
-    <div class="section-triangle reviews-triangle"></div>
-    <section class="reviews" id="reviews">
-        <div class="container">
-            <p class="section-subtitle">отзывы</p>
-            <h2>Отзывы клиентов</h2>
-            <div class="reviews_block swiper mySwiper">
-                <div class="swiper-wrapper">
-                    {% for card in Reviews %}
-                        <div class="swiper-slide reviews_media_item anim_block">
-                            <div class="card-body-container">
-                                <p class="card-body-text">{{ card.body }}</p>
-                                {#                                <p>{{ card.create_date }}</p>#}
-                            </div>
-                            <div class="review-header">
-                                <p>{{ card.name }}</p>
-                            </div>
-                        </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-    </section>
+
     <!-- Блок "порядок работы"-->
     <div class="section-triangle work-process-triangle"></div>
     <section class="work-process">
