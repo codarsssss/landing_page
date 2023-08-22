@@ -58,16 +58,20 @@ section p {
 /* Шапка */
 .header {
   position: absolute;
-  width: 89%;
+  width: 100%;
   display: flex;
+  flex-direction: row;
+  align-content: center;
   align-items: center;
   color: white;
   padding-top: 33px;
-  padding-bottom: 40px;
+  /*padding-bottom: 40px;*/
   right: 0;
   left: 0;
+  /*padding-left: 15px;*/
   z-index: 1;
-  margin: auto;
+  /*margin: auto;*/
+
 }
 
 .header__logo {

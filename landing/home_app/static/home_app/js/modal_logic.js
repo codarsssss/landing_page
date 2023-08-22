@@ -3,6 +3,7 @@ const modal_block = document.querySelector('.modal_block');
 const modal_wrapper = document.querySelector('.modal');
 const modal_close_btn = document.querySelector('.close_btn');
 const body = document.querySelector('html');
+const header = document.querySelector('header')
 
 const service_btns = document.querySelectorAll('.modal_call_service');
 const service_items = document.querySelectorAll('.services__item');
@@ -99,10 +100,9 @@ let toggleModal = function toggleModal() {
     if (body.style.overflowY === 'hidden') {
         body.style.overflowY = 'visible';
         body.style.paddingRight = '0'
-
     } else {
-        body.style.overflowY = 'hidden';
         body.style.paddingRight = '18px'
+        body.style.overflowY = 'hidden'
     }
     
 };
