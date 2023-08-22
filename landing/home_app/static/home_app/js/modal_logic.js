@@ -47,11 +47,7 @@ for (let i = 0; i < service_btns.length; i++) {
 
         body.style.overflowY = 'visible';
 
-        if (window.innerWidth >= 1001) {
-            services_title[i].style.maxWidth = '371px'
-        } else {
-            services_title[i].style.maxWidth = '260px'
-        }
+        services_title[i].style.display = 'block'
     })
 
 // Открытие модалки с услугами
@@ -82,8 +78,8 @@ for (let i = 0; i < service_btns.length; i++) {
 
         service_btns[i].style.display = 'none'
 
-        services_title[i].style.width = '100%'
-        services_title[i].style.maxWidth = '100%'
+        services_title[i].style.display = 'none'
+
         toggleServicesContent(i);
 
         body.style.overflowY = 'hidden';
@@ -100,8 +96,41 @@ let toggleModal = function toggleModal() {
     if (body.style.overflowY === 'hidden') {
         body.style.overflowY = 'visible';
         body.style.paddingRight = '0'
+        if (window.innerWidth <= 768) {
+            header.style.paddingRight = '20px'
+        }
+
+        if (window.innerWidth <= 600) {
+            header.style.paddingRight = '10px'
+        }
+        
+        if (window.innerWidth > 768) {
+            header.style.paddingRight = '50px'
+        }
+
     } else {
-        body.style.paddingRight = '18px'
+
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i
+            .test(navigator.userAgent)) {
+
+                if (window.innerWidth <= 768) {
+                    header.style.paddingRight = '20px'
+                }
+        
+                if (window.innerWidth <= 600) {
+                    header.style.paddingRight = '10px'
+                }
+                
+                if (window.innerWidth > 768) {
+                    header.style.paddingRight = '50px'
+                }
+        } else {
+            body.style.paddingRight = '18px'
+
+            if (window.innerWidth > 768) {
+                header.style.paddingRight = '68px'
+            }
+        }
         body.style.overflowY = 'hidden'
     }
     
