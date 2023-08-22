@@ -40,6 +40,8 @@ for (let i = 0; i < service_btns.length; i++) {
         service_items[i].style.boxShadow = 'none';
         service_btns[i].style.display = 'inline';
         service_items[i].style.overflowY = 'hidden';
+
+
         service_items[i].style.backgroundImage = original_back_img_service_item[i];
 
         body.style.overflowY = 'visible';
@@ -56,6 +58,7 @@ for (let i = 0; i < service_btns.length; i++) {
     service_btns[i].addEventListener('click', function(e) {
         e.stopPropagation();
         tonnerBlock.classList.add('active')
+
         services__item_preview[i].style.display = 'none'
         service_items[i].style.zIndex = '1001';
         service_items[i].style.position = 'fixed';
@@ -83,6 +86,7 @@ for (let i = 0; i < service_btns.length; i++) {
         toggleServicesContent(i);
 
         body.style.overflowY = 'hidden';
+
         })
 }
 
@@ -94,8 +98,11 @@ let toggleModal = function toggleModal() {
 
     if (body.style.overflowY === 'hidden') {
         body.style.overflowY = 'visible';
+        body.style.paddingRight = '0'
+
     } else {
         body.style.overflowY = 'hidden';
+        body.style.paddingRight = '18px'
     }
     
 };
@@ -126,6 +133,7 @@ for (let i = 0; i < btn.length; ++i){
     service_items[item].style.overflowY = 'hidden';
     service_items[item].style.backgroundImage = original_back_img_service_item[item];
     body.style.overflowY = 'visible';
+
 
     if (window.innerWidth >= 1001) {
         services_title[item].style.maxWidth = '371px'

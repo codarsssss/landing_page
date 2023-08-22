@@ -95,7 +95,7 @@
                             </li>
                         </ul>
                         <div class='desc_button' style="display: flex; justify-content: center; align-items: center;">
-                            <button class="modal_call" style="margin: 0;">Получить консультацию</button>
+                            <button class="modal_call" style="margin: 0; font-family: 'Raleway', sans-serif;">Получить консультацию</button>
                         </div>
                     </div>
 
@@ -283,10 +283,10 @@
         <!-- Биография -->
         <img src="{% static 'home_app/img/crop_audit.png' %}" alt="gradient background" class="profile-triangle">
         <div class="container">
-            <div class="profile__biography">
+            <div class="profile__biography ">
                 <img src="{% static 'home_app/img/profile_photo.png' %}" alt>
                 <div>
-                    <p class="job-title" style="display: flex; justify-content:center; align-items:center; font-family: 'Raleway';">Адвокат</p>
+                    <p class="job-title" style="display: flex; justify-content:center; font-family: 'Raleway', sans-serif;">Адвокат</p>
                     <h2>Чебучакова Татьяна Юрьевна</h2>
 {#                    <p class="profile__biography-text">#}
 {#                        Эксперт по защите личных активов и субсидиарной ответственности#}
@@ -431,7 +431,7 @@
         <div class="container">
             <p class="section-subtitle">медиа</p>
             <h2>Лицензии и сертификаты</h2>
-            <div class="news_media swiper mySwiper_1">
+            <div class="news_media swiper mySwiper_1" id="license">
                 <div class="swiper-wrapper">
 
                     <a class="swiper-slide news-index anim_block" href="{% static 'home_app/img/achievements/orig/1.jpg' %}" data-fancybox>
