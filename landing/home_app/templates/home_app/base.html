@@ -67,9 +67,6 @@
             <li>
                 <a href="{% url 'home_app:index' %}#about">Об эксперте</a>
             </li>
-            <li>
-                <a href="{% url 'home_app:index' %}#reviews">Отзывы</a>
-            </li>
         </ul>
     </nav>
 
@@ -105,9 +102,6 @@
                     </li>
                     <li>
                         <a href="{% url 'home_app:index' %}#about">Об эксперте</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'home_app:index' %}#reviews">Отзывы</a>
                     </li>
                 </ul>
             </nav>
@@ -163,6 +157,7 @@
                             maxlength="100"
                             name="username"
                             placeholder="Имя"
+                            required
                     >
                 </div>
                 <div class="modal_form_item">
@@ -173,6 +168,7 @@
                             type="text"
                             name="number"
                             placeholder="Телефон"
+                            required
                     >
                 </div>
 

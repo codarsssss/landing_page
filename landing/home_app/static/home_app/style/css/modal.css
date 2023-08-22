@@ -127,23 +127,16 @@
 }
 
 .modal_footer > button {
-    background-image: linear-gradient(91.65deg, #ecd8cd 12.88%, #d8ae97 100.32%);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-    color: transparent;
-    background-clip: text;
-    padding: 15px 20px;
     color: white;
-    border-radius: 4px;
-    margin-top: 15px;
-    transition: all .3s ease;
-    cursor: pointer;
-    margin-bottom: 15px;
-    border:none;
-    font-size: 26px;
+    font-size: 22px;
+    letter-spacing: 0.2px;
+    padding: 20px 50px 20px 50px;
+    background: linear-gradient( 90deg, rgba(224, 186, 165, 1) 0%, rgba(203, 146, 115, 1) 100% );
+    border: none;
+    border-bottom: 5px solid #ac8772;
+    border-radius: 10px;
     font-family: "Raleway";
+    margin-bottom: 10px;
 }
 
 .modal_footer > button:hover{
